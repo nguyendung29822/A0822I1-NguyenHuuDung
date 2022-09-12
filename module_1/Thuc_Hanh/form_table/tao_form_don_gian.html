@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .title {
+            color: blue;
+        }
+
+        .checkbox {
+            color: tomato;
+        }
+
+        .div1 {
+            background: white;
+            width: 450px;
+            border: 10px solid aquamarine;
+            padding-top: -10px;
+        }
+        .div2 {
+            background-color: lightyellow;
+            width: 450px;
+            padding-top: -10px;
+        }
+    </style>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tao form don gian</title>
 </head>
 <body>
-$END$
+
+    <div class="div1">
+        <form action="#" method="get" style="margin-left: 20px;margin-right: 20px">
+            <h1 style="background:tomato;color: aliceblue ;margin-left: 30px ">SỞ THÍCH CỦA BẠN</h1>
+            <span class="title">Họ Và Tên</span> <input type="text" name="Họ Và Tên"/><br><br>
+            <span class="title" style="margin-left:32px">Email</span> <input type="text" name="Email"/><br><br>
+            <span class="title" style="margin-left:12px">Sở Thích</span>
+            <input type="checkbox" value="sport" name="hobby"/><span class="checkbox">Thể Thao</span>
+            <input type="checkbox" value="music" name="hobby"/><span class="checkbox">Âm Nhac</span>
+            <input type="checkbox" value="reading" name="hobby"/><span class="checkbox">Đọc Sách</span><br>
+            <input type="checkbox" value="internet" name="hobby" style="margin-left:78px"/><span class="checkbox">Lướt Web</span>
+            <input type="checkbox" value="game" name="hobby" style="margin-right:10px"/><span class="checkbox"
+                                                                                              style="margin-right:13px">Game</span>
+            <input type="checkbox" value="travel" name="hobby"/><span class="checkbox">Du Lịch</span><br>
+            <input type="checkbox" value="Media" name="hobby" style="margin-left:78px"/><span
+                class="checkbox">Điện Ảnh</span><br>
+            <button type="submit" style="margin-left:78px"> Gửi Thông Tin</button>
+            <button type="reset"> Nhập Lại</button>
+
+        </form>
+    </div>
+    <br>
+    <br>
+
+
+<div class="div2">
+        <form action="#" method="get" style="margin-left: 20px;margin-right: 20px"/>
+        <h1 style="background: aqua;color: blue ;margin-left: 30px ">ĐĂNG KÍ HỌC VIÊN</h1>
+        <span class="title"style="margin-left:32px">Họ Và Tên</span> <input type="text" name="Họ Và Tên"style="margin-left:32px"/><br><br>
+        <span class="title"style="margin-left:32px">Ngày Sinh</span> <input type="date" name="birthday"style="margin-left:32px"><br><br>
+        <span class="title"style="margin-left:32px">Giới Tính</span> <input type="radio" name="gender" value="false"style="margin-left:32px">Nữ
+        <input type="radio" name="gender" value="true"style="margin-left:32px">Nam<br><br>
+    <span class="title" style="margin-left: 32px">Địa chỉ</span> <input type="text" name="address"style="margin-left:50px"><br>
+    <span class="title" style="margin-left: 32px">Lớp</span>
+        <select name="class" style="margin-left: 36px "/>
+    <option value="chọn lớp"> Chon Lớp</option>
+    <option value="lớp A"> Lớp A</option>
+    <option value="lớp B"> Lớp B</option>
+    <option value="lớp C"> Lớp C</option>
+        </select><br>
+
+        <span class="title" style="margin-left:32px">Email</span> <input type="text" name="Email" style="margin-left:32px"/><br>
+    <button type="submit" style="margin-left:78px">Đăng Kí</button>
+    <button type="reset"> Nhập Lại</button>
+
+
+</form>
+</div>
+
 </body>
 </html>

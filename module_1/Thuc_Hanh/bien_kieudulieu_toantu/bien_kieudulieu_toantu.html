@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemToan = parseFloat(prompt('nhap vao diem toan:'));
+    let diemLy = parseFloat(prompt('nhap vao diem ly:'));
+    let diemHoa = parseFloat(prompt('nhap vao diem hoa'));
+    let dTB = (diemToan+diemLy+diemHoa)/3;
+    let tongDiem = diemHoa+diemLy+diemToan;
+    document.write('dTB ='+ dTB);
+    document.write('<br>');
+    document.write('Tong 3 mon la:'+ tongDiem);
+</script>
+<br>
+<script>
+    let celsius = parseFloat(prompt('Celsius:'));
+    fahrenheit = parseFloat((9*celsius)/5+32);
+    document.write('Fahrenheit ='+ fahrenheit);
+</script>
+<br>
+<script>
+    let r = parseFloat(prompt('ban kinh cua hinh tron la:'));
+    const PI ='3.14';
+    let p = parseFloat(PI*r*r);
+    document.write('dien tich hinh tron la :'+ p);
+
+</script>
+<br>
+<script>
+    let r1 = parseFloat(prompt('bán kính của hình tròn là":'));
+    let c = parseFloat(r1*2*PI);
+    document.write('chu vi cua hinh tron la:'+ c);
+</script>
+</body>
+</html>

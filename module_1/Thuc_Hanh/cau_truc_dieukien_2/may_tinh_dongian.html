@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MÁY TÍNH ĐƠN GIẢN</title>
+</head>
+<body>
+<table border="1px" width="5px" style="border: solid">
+    <tr>
+        <td colspan="4"><input type="text" id="window"></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nhap(this.value)" value="1">1</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="2">2</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="3">3</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="+">+</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nhap(this.value)" value="4">4</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="5">5</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="6">6</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="-">-</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nhap(this.value)" value="7">7</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="8">8</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="9">9</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="*">x</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="xoa()" value="C">C</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="0">0</button> </td>
+        <td><button type="button" onclick="bang()" value="=">=</button> </td>
+        <td><button type="button" onclick="nhap(this.value)" value="/">/</button> </td>
+    </tr>
+</table>
+    <script>
+        function nhap(so) {
+            document.getElementById('window').value +=so;
+
+
+        }
+        function bang() {
+           let string = document.getElementById('window').value;
+           document.getElementById('window').value = eval(string);
+
+        }
+        function xoa() {
+            document.getElementById('window').value ='';
+
+        }
+        function f() {
+
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

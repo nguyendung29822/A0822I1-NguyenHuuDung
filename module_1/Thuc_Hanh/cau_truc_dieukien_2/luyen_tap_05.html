@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập cấu trúc điều kiện bài 5</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhập vào điểm bài kiểm tra:');
+    let b = +prompt('nhập vào điểm thi giữa kì:');
+    let c = +prompt('nhập vào điểm thi cuối kì:');
+    let dtb = (a + b + c) / 3;
+    if (dtb >= 8.5) {
+        document.write('học sinh xuất sắc');
+    } else if (7 <= dtb < 8.5) {
+        document.write('học sinh khá')
+    } else if (5 <= dtb < 7) {
+         document.write('học sinh trung bình');
+    } else {
+        document.write('học sinh yếu');
+    }
+
+</script>
+</body>
+</html>

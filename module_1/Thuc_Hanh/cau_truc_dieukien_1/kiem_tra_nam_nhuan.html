@@ -6,14 +6,40 @@
 </head>
 <body>
 <script>
-    let year= parseInt(prompt('nhap vao nam :'))
-    if(year%4==0&&year%100!=0){
-        alert('năm nhuận');
-    }else if(year%100==0&&year%400==0){
-        alert('năm nhuận');
+    // let year= parseInt(prompt('nhap vao nam :'))
+    // if(year%4==0&&year%100!=0){
+    //     alert('năm nhuận');
+    // }else if(year%100==0&&year%400==0){
+    //     alert('năm nhuận');
+    // }else{
+    //     alert('không phải năm nhuận');
+    // }
+    // let year = +prompt("Nhập năm: ");
+    // (year%4 ==0) ||(year % 100 ==0 && year %400 ==0)?
+    //     alert(year +" là năm nhuận"):
+    //     alert(year +" không phải là năm nhuận");
+
+    let nam_nhuan = false;
+    let year = +prompt('nhập năm:');
+    let chiahet4 = year % 4 ==0;
+    if(chiahet4) {
+        let chiahet100 = year % 100 == 0;
+        if (chiahet100) {
+            let chiahet400 = year % 400 == 0;
+
+            if (chiahet400) {
+                nam_nhuan = true;
+            }
+        }else {
+                nam_nhuan = true;
+            }
+        }
+    if(nam_nhuan){
+        alert(year + 'là năm nhuận');
     }else{
-        alert('không phải năm nhuận');
+        alert(year + 'k là năm nhuận');
     }
+
 </script>
 </body>
 </html>

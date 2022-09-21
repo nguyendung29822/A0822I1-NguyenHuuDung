@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SỰ KIỆN CHUỘT</title>
+</head>
+<body>
+<img id="myImage" src="336295657902e8becdeb174f977e0e8b.jpg" style="width: 100px"><br>
+<p>Click button below to move the image to right</p>
+<button type="button" onclick="moveRight()">Click Me</button>
+<script>
+    window.onload = init;
+
+    let imgObj = null;
+
+    function init() {
+        imgObj = document.getElementById('myImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.right = '0px';
+    }
+
+    function moveRight() {
+        imgObj.style.right = parseInt(imgObj.style.right) + 10 + 'px';
+        
+
+
+    // }
+    // // function moveRight() {
+    // //     imgObj.style.right = parseInt(imgObj.style.right) - 10 + 'px';
+
+    }
+</script>
+
+
+</body>
+</html>

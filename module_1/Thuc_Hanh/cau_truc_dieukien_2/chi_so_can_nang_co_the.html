@@ -11,8 +11,8 @@
 <p>chiều cao</p>
 <input type="text" id="height">
 <br>
-<button type="button" onclick="bMI">click</button>
-<p id="result">result:</p>
+<button type="button" onclick="bMI()">click</button>
+<p id="result">Result:</p>
 <script>
     function bMI() {
         let weight = +document.getElementById("weight").value;
@@ -20,13 +20,13 @@
         let bMI = weight / (height * height);
 
         if (bMI < 18.5) {
-            document.getElementById("result").innerHTML = "Underweight";
-        } else if (bMI < 25.0) {
-            document.getElementById("result").innerHTML = "Normal";
-        } else if (bMI < 30.0) {
-            document.getElementById("result").innerHTML = "Overweight";
+            document.getElementById("result").innerHTML = " Result: Underweight";
+        } else if (18.5 <= bMI && bMI < 25.0) {
+            document.getElementById("result").innerHTML = " Result: Normal";
+        } else if (25.0 <= bMI && bMI < 30.0) {
+            document.getElementById("result").innerHTML = " Result: Overweight";
         } else {
-            document.getElementById("result").innerHTML = "Obese";
+            document.getElementById("result").innerHTML = " Result: Obese";
         }
 
     }

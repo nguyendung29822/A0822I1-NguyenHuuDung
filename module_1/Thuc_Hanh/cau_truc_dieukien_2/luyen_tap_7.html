@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-    let a = +prompt('nhập vào số a khác 0 :');
-    let b = +prompt('nhập vào giá trị b :');
-    let c = +prompt('nhập vào giá trị c:');
-    let delTa = b * b - 4 * a * c;
-    if (delTa = 0) {
-        let x1 = x2 = -b/ (2 * a);
+    let numA = +prompt('nhập vào số a khác 0 :');
+    let numB = +prompt('nhập vào giá trị b :');
+    let numC = +prompt('nhập vào giá trị c:');
+    let delTa = (numB * numB) - (4 * numA * numC);
+    if (delTa == 0) {
+        let x1 = x2 = -numB / (2 * numA);
         document.write(' x1 = x2 =' + x1);
     } else if (delTa > 0) {
-        let x1 = (-b + math.sqrt(delTa)) / (2 * a);
-        let x2 = (-b - math.sqrt(delTa)) / (2 * a);
+        let x1 = -numB + (math.sqrt(delTa)) / (2 * numA);
+        let x2 = -numB - (math.sqrt(delTa)) / (2 * numA);
         document.write('x1 =' + x1);
         document.write('x2 =' + x2);
 

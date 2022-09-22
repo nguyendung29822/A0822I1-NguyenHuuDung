@@ -9,13 +9,11 @@
     let a = +prompt('nhập vào só a:');
     let b = +prompt('nhập vào só b:');
     let c = +prompt('nhập vào só c:');
-    if (a > 0 && b > 0 && c > 0) {
+    if (a > 0 && b > 0 && c > 0 && a + b >= c) {
         alert('a,b,c là 3 cạnh của 1 tam giác');
-    } else if (a + b > c) {
+    } else if (a > 0 && b > 0 && c > 0 > 0 && c + b >= a) {
         alert('a,b,c là 3 cạnh của 1 tam giác');
-    } else if (b + c > a) {
-        alert('a,b,c là 3 cạnh của 1 tam giác');
-    } else if (a + c > b) {
+    } else if (a > 0 && b > 0 && c > 0 && a + c >= b) {
         alert('a,b,c là 3 cạnh của 1 tam giác');
     } else {
         alert('a,b,c không là 3 cạnh của 1 tam giác');

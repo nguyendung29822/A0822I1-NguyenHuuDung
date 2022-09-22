@@ -10,13 +10,13 @@
 <input type="text" id="number2">
 <br>
 <br>
-<button type="button" onclick="phepcong()">Addition(+)</button>
-<button type="button" onclick="pheptru()">Subtraction(-)</button>
-<button type="button" onclick="phepnhan()">Multiplication(x)</button>
-<button type="button" onclick="phepchia()">Divition(/)</button>
+<button type="button" onclick="phepCong()">Addition(+)</button>
+<button type="button" onclick="phepTru()">Subtraction(-)</button>
+<button type="button" onclick="phepNhan()">Multiplication(x)</button>
+<button type="button" onclick="phepChia()">Divition(/)</button>
 <p id="demo" style="color: blue"></p>
 <script>
-    function phepcong() {
+    function phepCong() {
         let number1 = document.getElementById('number1').value;
         let number2 = document.getElementById('number2').value;
         number1 = parseFloat(number1);
@@ -25,7 +25,7 @@
         document.getElementById("demo").innerHTML="Result Addition:"+ tong;
 
     }
-    function pheptru() {
+    function phepTru() {
         let number1 = document.getElementById('number1').value;
         let number2 = document.getElementById('number2').value;
         number1 = parseFloat(number1);
@@ -33,7 +33,7 @@
         hieu = (number1 - number2);
         document.getElementById("demo").innerHTML = "Result Addition:" + hieu;
     }
-    function phepnhan() {
+    function phepNhan() {
         let number1 = document.getElementById('number1').value;
         let number2 = document.getElementById('number2').value;
         number1 = parseFloat(number1);
@@ -41,7 +41,7 @@
         tich = (number1 * number2);
         document.getElementById("demo").innerHTML = "Result Addition:" + tich;
     }
-    function phepchia() {
+    function phepChia() {
         let number1 = document.getElementById('number1').value;
         let number2 = document.getElementById('number2').value;
         number1 = parseFloat(number1);

@@ -5,22 +5,24 @@
     <title>bài 7</title>
 </head>
 <body>
+<!--<p id="demo"></p>-->
 <script>
-    let numA = +prompt('nhập vào số a khác 0 :');
-    let numB = +prompt('nhập vào giá trị b :');
-    let numC = +prompt('nhập vào giá trị c:');
-    let delTa = (numB * numB) - (4 * numA * numC);
-    if (delTa == 0) {
-        let x1 = x2 = -numB / (2 * numA);
-        document.write(' x1 = x2 =' + x1);
-    } else if (delTa > 0) {
-        let x1 = -numB + (math.sqrt(delTa)) / (2 * numA);
-        let x2 = -numB - (math.sqrt(delTa)) / (2 * numA);
-        document.write('x1 =' + x1);
-        document.write('x2 =' + x2);
-
+    let numA = +prompt('nhập vào số a:');
+    let numB = +prompt('nhập vào số b:');
+    let numC = +prompt('nhập vào số c');
+    let delta = (numB * numB) - (4 * numA * numC);
+    let x1 = (-numB + Math.sqrt(delta)) / (2 * numA);
+    let x2 = (-numB + Math.sqrt(delta)) / (2 * numA);
+    let x3 = -numB / (2 * numA);
+    if (delta > 0) {
+        document.write('phương trình có 2 nghiệm phân biệt x1 ='+x1 + 'x2='+x2);
+        //document.getElementById('demo').innerText = 'phương trình có 2 nghiệm phân biệt là : x1 =' + x1 + 'x2=' + x2;
+    } else if (delta == 0) {
+        document.write('phương trình có nghiệm kép x1 =x2 = '+x3);
+        //document.getElementById('demo').innerText = 'phương trình có nghiệm kép x1 = x2 = ' + x3;
     } else {
         document.write('phương trình vô nghiệm');
+        //document.getElementById('demo').innerText = 'phương trinh vô nghiệm';
     }
 </script>
 

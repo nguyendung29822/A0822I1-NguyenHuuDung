@@ -7,7 +7,8 @@
 <body>
 <img id="myImage" src="336295657902e8becdeb174f977e0e8b.jpg" style="width: 100px"><br>
 <p>Click button below to move the image to right</p>
-<button type="button" onclick="moveRight()">Click Me</button>
+<button type="button" onclick="moveToRight()">Click Me!</button>
+<button type="button" onclick="moveToLeft()">click Me!</button>
 <script>
     window.onload = init;
 
@@ -16,17 +17,17 @@
     function init() {
         imgObj = document.getElementById('myImage');
         imgObj.style.position = 'relative';
-        imgObj.style.right = '0px';
+        imgObj.style.left ='0px';
     }
 
-    function moveRight() {
-        imgObj.style.right = parseInt(imgObj.style.right) + 10 + 'px';
+    function moveToRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
         
 
 
-    // }
-    // // function moveRight() {
-    // //     imgObj.style.right = parseInt(imgObj.style.right) - 10 + 'px';
+     }
+    function moveToLeft() {
+        imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
 
     }
 </script>

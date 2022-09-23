@@ -16,7 +16,7 @@
     let monTH = parseInt(prompt('số tháng vay:'));
     let billMonth = parseInt(prompt('nhập vào tháng cần tính tiền:'));
     let monNey_a = ((loan*inTerRet_RaTe)/monTH) + (loan/monTH);
-    let monNey_b = (loan - (loan/monTH))*(inTerRet_RaTe/monTH)+ monNey_a;
+    let monNey_b = ((loan - (loan/monTH))*inTerRet_RaTe)/monTH+ (loan/monTH);
     if(billMonth>1){
         document.write('số tiền phải trả cả gốc và lãi là:'+monNey_b);
     }else{

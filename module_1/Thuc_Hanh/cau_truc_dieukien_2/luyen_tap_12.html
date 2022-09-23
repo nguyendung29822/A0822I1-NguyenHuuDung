@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 12-tính lãi suất ngân hàng</title>
+</head>
+<body>
+<script>
+    // vidu: Bạn vay 50 triệu đồng, thời hạn trong 12 tháng (1 năm) với mức lãi suất 12%/ năm
+    // Tiền gốc trả hàng tháng = 50 triệu/12 ~ 4.1 triệu
+    // Tiền lãi tháng đầu = (50 triệu * 12%)/12 = 500.000 VNĐ
+    // Tiền lãi tháng thứ 2  = (50 triệu – 4.1 triệu)*12%/12 ~ 458.000 VNĐ
+    // Các tháng tiếp theo tiếp tục được tính như vậy đến khi trả hết nợ
+    let loan = parseInt(prompt('nhập vào số tiền vay(đơn vị VND):'));
+    let inTerRet_RaTe = +prompt('nhập vào lãi suất vay hàng tháng(%):');
+    let monTH = parseInt(prompt('số tháng vay:'));
+    let billMonth = parseInt(prompt('nhập vào tháng cần tính tiền:'));
+    let monNey_a = ((loan*inTerRet_RaTe)/monTH) + (loan/monTH);
+    let monNey_b = (loan - (loan/monTH))*(inTerRet_RaTe/monTH)+ monNey_a;
+    if(billMonth>1){
+        document.write('số tiền phải trả cả gốc và lãi là:'+monNey_b);
+    }else{
+        document.write('số tiền phải trả cả gốc và lãi là:'+monNey_a);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 11- tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+  let thuNhap = +prompt('nhập vào tổng thu nhập của 1 tháng(đơn vị tính là vnd):');
+  let thueNop_a = 0.05*thuNhap ;
+  let thueNop_b = (0.25*1000000)+(0.1*thuNhap);
+  let thueNop_c = (0.75*1000000)+(0.15*thuNhap);
+  let thueNop_d = (1.95*1000000)+(0.2*thuNhap);
+  if(thuNhap<=5000000){
+      document.write('tiền thuế phải đóng là:'+thueNop_a);
+  }else if(5000000<thuNhap&&thuNhap<=10000000){
+      document.write('tiền thuế phải đóng là:'+thueNop_b);
+  }else if(10000000<thuNhap&&thuNhap<=18000000){
+      document.write('tiền thuế phải đóng là:'+thueNop_c);
+  }else{
+      document.write('tiền thuế phải đóng là:'+thueNop_d);
+  }
+</script>
+</body>
+</html>

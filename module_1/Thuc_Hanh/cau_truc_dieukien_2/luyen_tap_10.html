@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bài 10</title>
+    <title>bài 10- tính giá điện</title>
 </head>
 <body>
 <script>
-    
+    let congSuat = +prompt('nhập vào công suất tiêu thụ điện của gia đình(đơn vị là KW) :');
+    let thoiGian = +prompt('nhập vào thời gian sử dụng điện(đơn vị là giờ :');
+    let tienDien = congSuat * thoiGian * 1000;
+    let tienDienTang = tienDien+12000;
+    if (congSuat > 1) {
+        document.write('số tiền điện phải trả là :' + tienDienTang + 'vnd');
+    } else {
+        document.write('số tiền điện cần phải trả là :' + tienDien + 'vnd');
+    }
 </script>
 </body>
 </html>

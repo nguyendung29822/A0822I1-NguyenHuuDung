@@ -14,16 +14,31 @@
     let x1 = (-numB + Math.sqrt(delta)) / (2 * numA);
     let x2 = (-numB + Math.sqrt(delta)) / (2 * numA);
     let x3 = -numB / (2 * numA);
-    if (delta > 0) {
-        document.write('phương trình có 2 nghiệm phân biệt x1 ='+x1 + 'x2='+x2);
-        //document.getElementById('demo').innerText = 'phương trình có 2 nghiệm phân biệt là : x1 =' + x1 + 'x2=' + x2;
-    } else if (delta == 0) {
-        document.write('phương trình có nghiệm kép x1 =x2 = '+x3);
-        //document.getElementById('demo').innerText = 'phương trình có nghiệm kép x1 = x2 = ' + x3;
+    let x4 = -numC / numB;
+    if (numA == 0) {
+        if (numB != 0) {
+            document.write("phương trình có nghiệm duy nhất là : " + x4);
+        } else if (numC != 0) {
+            document.write("phương trình vô nghiệm");
+
+        } else {
+            document.write("phương trình vô số nghiệm");
+        }
+
     } else {
-        document.write('phương trình vô nghiệm');
-        //document.getElementById('demo').innerText = 'phương trinh vô nghiệm';
+        if (delta > 0) {
+            document.write('phương trình có 2 nghiệm phân biệt x1 =' + x1 + ("<br>")+ 'x2=' + x2);
+            //document.getElementById('demo').innerText = 'phương trình có 2 nghiệm phân biệt là : x1 =' + x1 + 'x2=' + x2;
+        } else if (delta == 0) {
+            document.write('phương trình có nghiệm kép x1 =x2 = ' + x3);
+            //document.getElementById('demo').innerText = 'phương trình có nghiệm kép x1 = x2 = ' + x3;
+        } else {
+            document.write('phương trình vô nghiệm');
+            //document.getElementById('demo').innerText = 'phương trinh vô nghiệm';
+        }
+
     }
+
 </script>
 
 </body>

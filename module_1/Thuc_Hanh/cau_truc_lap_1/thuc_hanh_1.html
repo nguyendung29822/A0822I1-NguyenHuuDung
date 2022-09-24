@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hành 1(for)</title>
+</head>
+<body>
+<!--bài 1-->
+<!--<script>-->
+<!--    for (let i = 0; i <= 5; i++) {-->
+<!--        document.write("the number is : " + i + "<br>");-->
+<!--    }-->
+<!--</script>-->
+<!--bài 2-->
+<script>
+    let num = +prompt("nhập vào 1 số bất kì:");
+    while (num<0){
+        num = +prompt("nhập lại :")
+    }
+    let total = 0;
+    let i =1;
+    for(;i<=num;i+=1){
+        total +=i;
+    }
+    alert(total);
+
+</script>
+</body>
+</html>

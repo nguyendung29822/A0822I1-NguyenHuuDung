@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giai thừa của 1 số nguyên dương</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("nhập vào 1 số nguyên dương:"));
+    let factorial=1;
+    if(num==0){
+        document.write("0!=1");
+    }else{
+        for (let i=1;i<=num;i++){
+           factorial*=i;
+        }
+        document.write("giai thừa của số vừa nhập là:"+factorial);
+    }
+
+
+</script>
+</body>
+</html>

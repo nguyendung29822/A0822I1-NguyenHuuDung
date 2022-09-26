@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in dãy fibonacci</title>
+</head>
+<body>
+<button type="button" onclick="show()">fibonacci</button>
+<script>
+    function check(fibo) {
+        if (fibo == 1 || fibo == 2) {
+            return 1;
+        } else {
+            return check(fibo - 1) + check(fibo - 2);
+        }
+    }
+
+    function show() {
+        for (let i = 1; i <= 30; i++) {
+            document.write(check(i) + "<br>");
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

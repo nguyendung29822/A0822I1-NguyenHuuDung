@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>30 số đầu tiên chia hết cho 7</title>
+</head>
+<body>
+<button type="button" onclick="show()">show</button>
+<p id="ketQua"></p>
+<script>
+    function show() {
+        let count = 0;
+        let n = 0;
+        let output = "";
+        while (count <= 29) {
+            if (check(n)) {
+                if (count == 0) {
+                    count = 0;
+                    output = n;
+                } else {
+                    output = output + ', ' + n;
+                }
+                count++;
+
+            }
+            n++;
+        }
+        document.getElementById("ketQua").innerText = output;
+    }
+    function check(n) {
+        if(n%7==0){
+            return true;
+        }
+        return false;
+    }
+
+
+</script>
+
+</body>
+</html>

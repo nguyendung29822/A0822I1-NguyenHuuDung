@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra 20 số nguyên tố đầu tiên</title>
+
+</head>
+<body>
+<button type="button" onclick="show()">show</button>
+<p id="output"></p>
+<script>
+    function show() {
+        let count = 0;
+        let n = 2;
+        let output = '';
+
+        while (count <= 20) {
+            if (check(n)) {
+                if (count == 0) {
+                    output = n;
+                } else {
+                    output = output + ', ' + n; // 2, 3
+                }
+                count ++;
+            }
+            n ++;
+        }
+
+        document.getElementById('output').innerText = output;
+    }
+
+    // Kiem tra so có phải là số nguyên tố hay không
+    function check(n) {
+        if (n < 2) {
+            return false;
+        }
+        if (n == 2 ) {
+            return  true;
+        }
+
+        if (n % 2 == 0) {
+            return  false;
+        }
+        let checkSqrt = Math.sqrt (n);
+        for ( let index = 3; index <= checkSqrt; index +=2 ) {
+            if (n % index == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="ketqua"></p>
+<script>
+    let data = "<table border='1'>";
+    for (let i = 1; i <= 20; i++) {
+        data += "<tr>";
+        for (let j = 1; j <= 20; j++) {
+            data += "<td>" + i * j + "</td>";
+        }
+        data += "</tr>";
+    }
+    data += "</table>";
+    document.getElementById("ketqua").innerHTML = data;
+
+
+</script>
+
+</body>
+</html>

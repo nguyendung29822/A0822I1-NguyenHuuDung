@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ hình</title>
+</head>
+<body>
+<script>
+    // let x1 = parseInt(prompt("nhập vào chiều rộng là:"));
+    // let y1 = parseInt(prompt("nhập vào chiều dài là:"));
+    // for (let i = 1; i <= x1; i++) {
+    //     for (let j = 1; j <= y1; j++) {
+    //         if (i == 1 || j == 1 || i == x1 || j == y1) {
+    //             document.write("*");
+    //         } else {
+    //             document.write("&ensp;");
+    //         }
+    //
+    //     }
+    //     document.write("<br>");
+    //
+    //  }
+    // document.write("<br>");
+    // document.write("<br>");
+    // document.write("<br>");
+    // //vẽ tam giác vuông cân rỗng với chiều cao h=5
+    // let count =1;
+    // for(let i=1;i<=5;i++){
+    //     for(let j =1;j<=5;j++){
+    //         if(i==5){
+    //             document.write("*");
+    //         }else{
+    //             if(j==1||count==j){
+    //                 document.write("*");
+    //             }else {
+    //                 document.write("&ensp;");
+    //             }
+    //
+    //         }
+    //     }
+    //     document.write("<br>");
+    //     count++;
+    // }
+    // document.write("<br>");
+    // document.write("<br>");
+    // document.write("<br>");
+    // //vẽ tam giác cân đặc có chiều cao là h=5
+    // for (let i=1;i<=5;i++){
+    //     for(let j=1;j<=5*2-1;j++){
+    //         if(i==5){
+    //             document.write("*");
+    //         }else if(j<=5-i||j>=5+i){
+    //             document.write("&ensp;");
+    //         }else{
+    //             document.write("*");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+    // document.write("<br>");
+    // document.write("<br>");
+    // document.write("<br>");
+    //vẽ tam giác cân rỗng có chiều cao là h=5
+    for (let i=1;i<=5;i++){
+        for (let j=1;j<=5*2-1;j++){
+            if(i==5){
+                document.write("*");
+            }else if(j==5-i+1||j==5+i-1){
+                document.write("*");
+            }else{
+                document.write("&ensp;");
+            }
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

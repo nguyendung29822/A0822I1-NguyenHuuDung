@@ -5,12 +5,27 @@
     <title>game đoán số</title>
 </head>
 <button type="button" onclick="start()">chơi</button>
-<p id="ketQua"></p>
 <body>
 <script>
-    function start(){
-        let userInput = +prompt('yêu cầu người dùng nhập vào khoảng dự đoán:');
-        let chooseNumber = +prompt()
+    let soLanChoi = 1;
+    function start() {
+        if (soLanChoi <= 3) {
+            alert("nhập số bạn muốn!:");
+            let max = parseInt(prompt("nhập vào giá trị trên:"));
+            let min = parseInt(prompt("nhập vào giá trị dưới:"));
+            let ranDomNum = Math.floor(Math.random() * (max - min) + min);
+            let guessNum = parseInt(prompt("dự đoán của bạn là:"));
+            if (guessNum < ranDomNum) {
+                alert("sai rồi!,yêu cầu dự đoán lớn hơn số bạn vừa đoán!");
+            } else if (guessNum > ranDomNum) {
+                alert("sai rồi!,yêu cầu dự đoán nhỏ hơn số bạn vừa đoán!");
+            } else {
+                alert("bạn đã đoán đúng!");
+            }
+            soLanChoi ++;
+            return;
+        }
+        alert("bạn đã quá số lần quy định chơi");
     }
 
 </script>

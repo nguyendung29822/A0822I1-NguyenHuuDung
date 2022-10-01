@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+
+    let check = "yes";
+    while (check != "no") {
+        let saLaRy = parseFloat(prompt("nhap vao luong cua nhan vien:")) * 1000000;
+        let mucA = 20 / 100;
+        let mucB = 10 / 100;
+        let mucC = 5 / 100;
+        if (saLaRy > 0) {
+            if (saLaRy < 7000000) {
+                let taxMonneyA = saLaRy * mucC;
+                let salaryReceivedA = saLaRy - taxMonneyA;
+                document.write("số tiền thực nhận là :" + salaryReceivedA);
+                document.write("<br>");
+                document.write("số tiền thuế phải đóng là:" + taxMonneyA);
+                document.write("<br>");
+            }
+            if (saLaRy >= 7000000 && saLaRy <= 15000000) {
+                let taxMonneyB = saLaRy * mucB;
+                let salaryReceivedB = saLaRy - taxMonneyB;
+                document.write("số tiền thực nhận là :" + salaryReceivedB);
+                document.write("<br>");
+                document.write("số tiền thuế phải đóng là:" + taxMonneyB);
+                document.write("<br>");
+            } else {
+                let taxMonneyC = saLaRy * mucA;
+                let salaryReceivedC = saLaRy - taxMonneyC;
+                document.write("số tiền thực nhận là :" + salaryReceivedC);
+                document.write("<br>");
+                document.write("số tiền thuế phải đóng là:" + taxMonneyC);
+                document.write("<br>");
+            }
+        } else {
+            alert("nhập lại:");
+        }
+        check = prompt("tiếp tục không [yes/no]");
+    }
+
+</script>
+
+</body>
+</html>

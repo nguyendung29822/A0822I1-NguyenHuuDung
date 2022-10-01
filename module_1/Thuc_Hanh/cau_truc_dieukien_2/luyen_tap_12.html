@@ -16,20 +16,25 @@
         let loan = parseInt(prompt('nhập vào số tiền vay(đơn vị VND):')) * 1000000;
         let inTerRetRaTe = parseInt(prompt('nhập vào lãi suất vay hàng tháng(%):')) / 100;
         let monTH = parseInt(prompt('số tháng vay:'));
+        if (loan > 0 && inTerRetRaTe > 0 && monTH > 0) {
 
 
-        if (monTH > 1) {
-            let monNeyA = ((loan * inTerRetRaTe) / monTH) + (loan / monTH);
-            let monNeyB = ((loan - (loan / monTH)) * inTerRetRaTe) / monTH + (loan / monTH);
-            document.write("tiền lãi và gốc phải trả tháng thứ 1 là :" + monNeyA);
-            document.write("tiền lãi và gốc phải trả tháng thứ 2 trở đi là :" + monNeyB);
-        } else {
+            if (monTH > 1) {
+                let monNeyA = ((loan * inTerRetRaTe) / monTH) + (loan / monTH);
+                let monNeyB = ((loan - (loan / monTH)) * inTerRetRaTe) / monTH + (loan / monTH);
+                document.write("tiền lãi và gốc phải trả tháng thứ 1 là :" + monNeyA);
+                document.write("<br>");
+                document.write("tiền lãi và gốc phải trả tháng thứ 2 trở đi là :" + monNeyB);
+                document.write("<br>");
+            } else {
 
-            let monNeyA = ((loan * inTerRetRaTe) / monTH) + (loan / monTH);
-            document.write("tiền lãi và gốc phải trả là :" + monNeyA);
+                let monNeyA = ((loan * inTerRetRaTe) / monTH) + (loan / monTH);
+                document.write("tiền lãi và gốc phải trả là :" + monNeyA);
+            }
+
+        }else{
+            alert("nhập sai");
         }
-
-
         kiemTra = prompt("tiếp tục tính hay không ? nhập [yes/no]");
     }
 

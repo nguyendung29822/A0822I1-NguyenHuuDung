@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //chèn dấu "-" vào giữa các số chẵn của 1 chuỗi
+    let num = prompt("nhập vào 1 dãy số bất kì");
+    let str = num.toString();
+    let result = [str[0]];
+    for (let i = 1; i < str.length; i++) {
+        if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) {
+            result.push("-", str[i]);
+        } else {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(""));
+    //chuyển chữ thường thành chữ hoa
+
+
+    // let str = 'The Quick Brown Fox';
+    // let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    // let result = [];
+    //
+    // for(let x=0; x<str.length; x++)
+    // {
+    //     if(UPPER.indexOf(str[x]) !== -1)
+    //     {
+    //         result.push(str[x].toLowerCase());
+    //     }
+    //     else if(LOWER.indexOf(str[x]) !== -1)
+    //     {
+    //         result.push(str[x].toUpperCase());
+    //     }
+    //     else
+    //     {
+    //         result.push(str[x]);
+    //     }
+    // }
+    // document.write(result.join(""));
+</script>
+
+</body>
+</html>

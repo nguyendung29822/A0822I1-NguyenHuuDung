@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3 khởi tạo mảng số nguyên, in ra gía trị max, tính trung bình của các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let myArrayNumber = +prompt("bạn muốn nhập bao nhiêu phần tử vào mảng:");
+    let arrayNumber = [];
+    let max = 0;
+    let index = 0;
+    let sum = 0;
+    let mediumArray = 0;
+    for (let i = 0; i < myArrayNumber; i++) {
+        let j = i + 1;
+        arrayNumber[i] = +prompt("nhập phần tử thứ " + j);
+    }
+    for (let i = 0; i < arrayNumber.length; i++) {
+        if (max < arrayNumber[i]) {
+            max = arrayNumber[i];
+            index = i;
+        }
+        sum += arrayNumber[i];
+        mediumArray = sum / arrayNumber.length;
+    }
+    document.write(sum+"<br>");
+    document.write("max = " + max + " at position: " + index + "<br>");
+    document.write("trung bình các phần tử trong mảng là:" + mediumArray);
+</script>
+</body>
+</html>

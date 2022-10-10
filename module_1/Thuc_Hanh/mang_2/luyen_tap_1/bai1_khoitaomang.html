@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khởi tạo mảng 10 phần tử, tính và hiển thị ra có bao nhiêu số nguyên >=10</title>
+</head>
+<body>
+<script>
+    let intArray = +prompt("bạn muốn có bao nhiêu phần tử trong mảng: ");
+    let array = [];
+    let count = 0;
+    for (let i = 0; i < intArray; i++) {
+        let j = i + 1;
+        array [i] = +prompt("nhập phần tử thứ " + j);
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] >= 10) {
+            count++;
+
+        }
+
+    }
+    document.write("số lượng số nguyên lớn hơn hoặc bằng 10 là :" + count);
+
+
+</script>
+
+</body>
+</html>

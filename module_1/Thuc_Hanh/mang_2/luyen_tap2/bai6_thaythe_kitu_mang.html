@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập vào 1 mảng kí tự và tìm kiếm '-' để thay thế bằng'_'</title>
+</head>
+<body>
+<script>
+    let intArray = prompt("bạn muốn có bao nhiêu phần tử trong mảng: ");
+    let array = [];
+    for (let i = 0; i < intArray; i++) {
+        let j = i + 1;
+        array [i] = prompt("nhập phần tử thứ " + j);
+    }
+    document.write(array + "<br>");
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === "-") {
+            array[i] = "_";
+
+        }
+    }
+    document.write(array);
+
+</script>
+
+</body>
+</html>

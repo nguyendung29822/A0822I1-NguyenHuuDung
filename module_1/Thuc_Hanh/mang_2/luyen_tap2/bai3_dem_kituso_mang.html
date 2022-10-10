@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm kí tự số trong 1 mảng kí tự</title>
+</head>
+<body>
+<script>
+    let intArray = +prompt("bạn muốn nhập vào mảng bao nhiêu phần tử");
+    let myArray = [];
+    for (let i = 0; i < intArray; i++) {
+        let j = i + 1;
+        myArray[i] = prompt("nhập phần tử thứ" + j);
+    }
+    document.write("mảng vừa nhập là"+ myArray +"<br>");
+    let countNumber = 0;
+    let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (let i = 0; i < myArray.length; i++) {
+        for (let j = 0; j < num.length; j++) {
+            if (myArray[i] == num[j]) {
+                countNumber += 1;
+            }
+        }
+
+    }
+
+    document.write("số kí tự số trong mảng kí tự là : " + countNumber);
+</script>
+
+</body>
+</html>

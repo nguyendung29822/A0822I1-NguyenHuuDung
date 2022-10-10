@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng mảng b là prefix của mảng a</title>
+</head>
+<body>
+<script>
+    let myA = +prompt("bạn muốn nhập vào bao nhiêu phần tử ");
+    let a = [];
+    let b = []; 
+    for (let i = 0; i < myA; i++) {
+        let j = i + 1;
+        a[i] = +prompt("phần tử thứ " + j);
+    }
+    for (let i = 0; i < a.length; i++) {
+        b[0] = 0;
+        for (let j = 0; j <= i; j++) {
+            b[i] += a[j];
+
+        }
+    }
+    document.write(b);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<input type="text" id="english"/>
+<input type="button" id="translate" value="dịch" onclick="english()"/>
+<p id="result:"></p>
+<script>
+    let a = ["orange", "banana", "melon"];
+    let b = ["quả cam", "quả chuối", "quả dưa"];
+
+    function english(){
+        let keyWork = document.getElementById("english").value;
+        for (let i = 0; i < a.length; i++) {
+            if (keyWork == a[i]) {
+                document.getElementById("result:").innerText = b[i];
+
+            }
+
+
+        }
+
+
+    }
+
+
+</script>
+
+</body>
+</html>

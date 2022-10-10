@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let numBers = [-3, 5, 7, 2, 9];
+    let max = numBers[0];
+    let index = 0;
+    for (let i = 1; i < numBers.length; i++) {
+        if (numBers[i] > max) {
+            max = numBers[i];
+            index = i;
+
+        }
+
+    }
+    alert("max =" + max + " at position :" + index);
+</script>
+
+</body>
+</html>

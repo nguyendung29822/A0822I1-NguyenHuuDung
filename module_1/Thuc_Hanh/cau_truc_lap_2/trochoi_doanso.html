@@ -14,6 +14,7 @@
             let max = parseInt(prompt("nhập vào giá trị trên:"));
             let min = parseInt(prompt("nhập vào giá trị dưới:"));
             let ranDomNum = Math.floor(Math.random() * (max - min) + min);
+            //math.random là hàm lấy giá trị trong khoảng từ 0 đến 1
             let guessNum = parseInt(prompt("dự đoán của bạn là:"));
             if (guessNum < ranDomNum) {
                 alert("sai rồi!,yêu cầu dự đoán lớn hơn số bạn vừa đoán!");

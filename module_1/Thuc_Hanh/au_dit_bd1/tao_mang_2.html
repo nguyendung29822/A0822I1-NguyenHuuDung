@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cho 2 mảng A,B tạo mảng chỉ chứa phần tử của B chứ k chứa A</title>
+</head>
+<body>
+<script>
+    let A = [7, 2, 5, 3, 5, 3];
+    let B = [7, 2, 5, 4, 6, 3, 5, 3];
+    let C = [];
+    let check = 0;
+    for (let i = 0; i < B.length; i++) {
+        check = 0;
+        for (let j = 0; j < A.length; j++) {
+            if (B[i] === A[j]) {
+                check = 1;
+            }
+        }
+        if (check == 0) {
+            C.push(B[i]);
+        }
+    }
+    document.write("mảng C là: " + C);
+</script>
+
+</body>
+</html>

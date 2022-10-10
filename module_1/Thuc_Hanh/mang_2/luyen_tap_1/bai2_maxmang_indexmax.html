@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2: khởi tạo mảng gồm 10 phần tử khác nhau, hiển thị max, vị trí của max</title>
+</head>
+<body>
+<script>
+    let myArrayNumber = +prompt("bạn muốn nhập bao nhiêu phần tử vào mảng:");
+    let array = [];
+    let max = 0;
+    let index = 0;
+
+    for (let i = 0; i < myArrayNumber; i++) {
+        let j = i + 1;
+        array[i] = +prompt("nhập phần tử thứ " + j);
+    }
+    for (let i = 0; i < myArrayNumber - 1; i++) {
+        for (let j = i + 1; j < myArrayNumber; j++) {
+            while (array[i] == array[j]) {
+                array[i] = +prompt("nhập phần tử thứ " + j);
+            }
+        }
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+            index = i;
+        }
+    }
+    document.write(" max = " + max + " at position " + index);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đảo ngược các phần tử trong mảng đó </title>
+</head>
+<body>
+<script>
+    let num = +prompt("Mời nhập số phần tử");
+    let arr = [];
+    for(let i=0; i<num; i++){
+        let j = i+1;
+        arr[i] = +prompt("MỜi nhập phần tử thứ: "+j);
+    }
+    document.write("Mảng vừa nhập là: "+arr);
+    for(let i=0; i< arr.length/2; i++){
+        let temp = arr[i];
+        arr[i] = arr[arr.length -1 -i];
+        arr[arr.length -1 -i] = temp;
+    }
+    document.write("<br>"+"Mảng sau khi đảo là: "+ arr);
+</script>
+
+</body>
+</html>

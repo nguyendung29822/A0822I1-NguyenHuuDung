@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm thực hiện đổi chỗ 2 số nguyên nhập vào</title>
+</head>
+<body>
+<script>
+    function swap(a, b) {
+        let temp =a;
+        a= b;
+        b = temp;
+        return [a,b];
+    }
+
+    let a = +prompt("nhập vào số nguyên thứ 1 :");
+    let b = +prompt("nhập vào số nguyên thứ 2 :");
+    document.write("2 số sau khi đổi chỗ cho nhau là :"+ swap(a,b));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viets hàm tính giai thừa của 1 số</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhập vào 1 số nguyên bất kì :"));
+    let f = 1;
+
+    function factorial(a) {
+        if (a === 0 || a === 1) {
+            alert("giai thừa có giá trị là 1");
+        } else {
+            for (let i = 1; i <= a; i++) {
+                f *= i;
+            }
+        }
+        //alert(a + "!" + "=" + f);
+        return f;
+    }
+    alert(a+"!"+"="+factorial(a));
+</script>
+
+</body>
+</html>

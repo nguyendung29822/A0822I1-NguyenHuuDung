@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm kiểm tra xem 1 số nhập vào có phải là số nguyên dương hay k, nếu phải trả về true, k phải trả về false</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("nhập vào 1 số bất kì :"));
+    function checkNum(a) {
+        if(a >= 0){
+            return true;
+        }else
+            return false;
+    }
+    checkNum(num);
+    if(num >=0){
+        document.write("số vừa nhập vào là số nguyên dương");
+    }else{
+        document.write("số vừa nhập vào không phải số nguyên dương");
+    }
+</script>
+
+</body>
+</html>

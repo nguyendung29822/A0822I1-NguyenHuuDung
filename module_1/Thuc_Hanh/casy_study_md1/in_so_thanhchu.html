@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ. Ví dụ 1234, kết quả in ra màn hình
+        là một hai ba bốn.</title>
+</head>
+<body>
+<input type="text" id="numbers"/>
+<input type="button" id="translate" value="change" onclick="letter()"/>
+<p id="result:"></p>
+<script>
+    let a = [1,2,3,4];
+    let b = ["một", "hai", "ba","bốn"];
+
+    function letter(){
+        let keyWork = document.getElementById("numbers").value;
+        for (let i = 0; i < a.length; i++) {
+            if (keyWork === a[i]) {
+                document.getElementById("result:").innerText = b[i];
+
+            }
+
+
+        }
+
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check định dạng phân số và rút gọn thành tối giản nếu là phân số </title>
+</head>
+<body>
+<script>
+    function UCLN(x, y) {
+        x = Math.abs(x);
+        y = Math.abs(y);
+        if (x === 0 || y === 0) {
+            return x + y;
+        }
+        while (x !== y) {
+            if (x > y) {
+                x = x - y;
+            } else
+                y = y - x;
+        }
+        return y;
+    }
+
+    function checkFraction(a, b, f) {
+        let temp = a / b;
+        if (f === temp && b !== 0) {
+            f = (a / UCLN(a, b)) / (b / UCLN(a, b));
+            
+        } else {
+        }
+    }
+
+    checkFraction();
+    let a1 = prompt("nhập vào tử số");
+    let b1 = prompt("nhập vào mẫu số");
+    let f = a1 / b1;
+    if (true) {
+        document.write("phân số tối giản là: " + f);
+    } else {
+        document.write("không là phân số");
+
+
+    }
+</script>
+</body>
+</html>

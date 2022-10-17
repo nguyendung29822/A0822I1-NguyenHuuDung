@@ -8,16 +8,25 @@
 <script>
     let myArray = +prompt("bạn muốn nhập bao nhiêu phần tử vào mảng");
     let numArray = [];
+    let count = 1;
     for (let i = 0; i < myArray; i++) {
         let j = i + 1;
         numArray[i] = +prompt("phần tử thứ " + j);
 
+
     }
-    if (numArray[i] != numArray[numArray.length - 1 - i]) {
-            document.write("NO");
-    }else {
+    for (let i = 0; i < numArray / 2; i++) {
+        if (numArray[i] != numArray[myArray - 1-i]) {
+            count = 0;
+        }
+    }
+    if (count == 0) {
+        document.write("NO");
+    } else {
         document.write("OK");
     }
+
+
 </script>
 </body>
 </html>

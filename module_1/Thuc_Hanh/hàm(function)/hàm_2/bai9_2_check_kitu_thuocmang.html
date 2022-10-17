@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập vào 1 mảng kí tự, và 1 kí tự bất kì, kiểm tra kí tự đó thuộc mảng hay không</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt("nhập vào chuỗi kí tự :");
+    let array = inputStr.split("");
+    let char = prompt("nhập vào 1 kí tự bất kì");
+    let count = 0;
+    document.write(checkChar(array,char));
+
+    function checkChar(array, char) {
+        for (let i = 0; i < array.length; i++) {
+            if (char === array[i]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return -1;
+        } else {
+            return count;
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

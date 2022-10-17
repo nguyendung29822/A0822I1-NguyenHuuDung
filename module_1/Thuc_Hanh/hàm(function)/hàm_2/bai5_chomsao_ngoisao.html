@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5 luyện tập 1</title>
+</head>
+<body>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let inputStar = prompt("nhập vào tên của ngôi sao");
+    let index = -1;
+
+    function check(str) {
+        for (let i = 0; i < star.length; i++) {
+            if (inputStar === star[i]) {
+                index = i;
+                break;
+            } else {
+                index = -1;
+            }
+        }
+        return index;
+    }
+
+    for (let i = 0; i < constellations.length; i++) {
+        if (i === check(star)) {
+            document.write("chòm sao tương ứng với ngôi sao là: " + constellations[i]);
+        }
+        if (check(star) === -1) {
+            document.write("không tìm thấy");
+            break;
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

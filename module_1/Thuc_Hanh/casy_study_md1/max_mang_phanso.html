@@ -13,30 +13,25 @@
     let myFraction = prompt("bạn muốn nhập vào bao nhiêu phân số");
     let numErators = [];
     let denoMinators = [];
+    let fraction = [];
     let maxFraction = 0;
     let index = 0;
-
     for (let i = 0; i < myFraction; i++) {
-
         let j = i + 1;
-        numErators[i] = +prompt("tử số thứ " + j);
-        denoMinators[i] = +prompt("mẫu số thứ " + j);
+        numErators[i] = +prompt("nhập vào tử số thứ " + j);
+        denoMinators[i] = +prompt("nhập vào mẫu số thứ " + j);
     }
-    let valueFraction =numErators[i]/maxFraction[i];
-    let arrayFraction = [numErators[i]/denoMinators[i]];
-
-    for (let j=0;j<arrayFraction.length;j++){
-        if (valueFraction > maxFraction) {
-            maxFraction = valueFraction;
+    for (let i = 0; i < myFraction; i++) {
+        let temp = numErators[i] / denoMinators[i];
+        fraction.push(temp);
+    }
+    for (let i = 0; i < myFraction; i++) {
+        if (maxFraction < fraction[i]) {
+            maxFraction = fraction[i];
             index = i;
         }
     }
-
-
-
-    document.write("phân số lơn nhất là :" + maxFraction + "tại vị trí thứ " + index);
-
-
+    document.write("phân số lớn nhất là: " + maxFraction + " tại vị trí " + index);
 
 </script>
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết hàm truyền vào mảng số nguyên bất kì,sau đó đảo ngược mảng số nguyên đó</title>
+</head>
+<body>
+<script>
+    let arrayNumbers = +prompt("bạn muốn nhập bao nhiêu phần tử của mảng :");
+    let array = [];
+    for (let i = 0; i < arrayNumbers; i++) {
+        let j = i + 1;
+        array[i] = +prompt("nhập vào phần tử thứ " + j);
+    }
+
+    function reverseArray(num) {
+        for (let i = 0; i < num.length/2; i++) {
+            let temp = array[i];
+            array[i] = array[array.length-1-i];
+            array[array.length-i-1] = temp;
+
+        }
+    }
+    reverseArray(array)
+    document.write("mảng sau khi đảo ngược là :" + array);
+
+</script>
+
+</body>
+</html>

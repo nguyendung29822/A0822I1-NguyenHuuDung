@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết hàm tìm min của 3 số nguyên bất kì đc nhập vào </title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập vào số nguyên 1 :");
+    let b = +prompt("nhập vào số nguyên 2 :");
+    let c = +prompt("nhập vào số nguyên 3 :");
+    let min = 0;
+
+    function checkMin(a, b, c) {
+        if (a < b && a < c) {
+            min = a;
+        }else if(b<c){
+            min = b;
+        }else{
+            min = c;
+        }
+        return min;
+
+    }
+
+    alert("giá trị nhỏ nhất là: "+ checkMin(a, b, c));
+</script>
+
+</body>
+</html>

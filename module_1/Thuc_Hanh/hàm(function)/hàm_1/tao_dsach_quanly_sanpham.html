@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quản lý danh sách</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="name" placeholder="new product">
+<input type="button" value="ADD" onclick="add()">
+<p id="result"></p>
+<h3>Display All Product</h3>
+<h4>Product Name</h4>
+<table>
+    <tr>
+        <td>Sony Xperia</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+        </td>
+    </tr>
+    <tr>
+        <td>Samsung Galaxy</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+    <tr>
+        <td>Nokia 6</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+    <tr>
+        <td>Xiaomi Redmi Note 4</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+    <tr>
+        <td>Apple Iphone 6s</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+    <tr>
+        <td>Xiaomi Mi 5s Plus</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+    <tr>
+        <td>Apple Iphone 8 Plus</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+    <tr>
+        <td>Fujitsu F-04E</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+    <tr>
+        <td>Oppo A71</td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Edit" onclick="edit(0)">
+        </td>
+        <td>
+            <input style="background: lawngreen" type="button" value="Delete" onclick="del(0)">
+    </tr>
+
+</table>
+<script>
+    class QuanLySanPham {
+        constructor(name) {
+            this.name = name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+    }
+
+    let QuanLySanPhamList = [];
+    let sanPham1 = new QuanLySanPham("Sony Xperia");
+    let sanPham2 = new QuanLySanPham("Samsung Galaxy");
+    let sanPham3 = new QuanLySanPham("Nokia 6");
+    let sanPham4 = new QuanLySanPham("Xiaomi Redmi Note 4");
+    let sanPham5 = new QuanLySanPham("Apple Iphone 6s");
+    let sanPham6 = new QuanLySanPham("Xiaomi 5s Plus");
+    let sanPham7 = new QuanLySanPham("Apple Iphone 8 Plus");
+    let sanPham8 = new QuanLySanPham("Fujitsu F-4E");
+    let sanPham9 = new QuanLySanPham("Oppo A71");
+
+    QuanLySanPhamList.push(sanPham1);
+    QuanLySanPhamList.push(sanPham2);
+    QuanLySanPhamList.push(sanPham3);
+    QuanLySanPhamList.push(sanPham4);
+    QuanLySanPhamList.push(sanPham5);
+    QuanLySanPhamList.push(sanPham6);
+    QuanLySanPhamList.push(sanPham7);
+    QuanLySanPhamList.push(sanPham8);
+    QuanLySanPhamList.push(sanPham9);
+
+    display(QuanLySanPhamList);
+    function display(list) {
+        let data = "<table>;
+        for (let i =0;i<list.length;i++){
+
+        }
+       
+    }
+    function add() {
+        let name = document.getElementById("name").value;
+        if(document.getElementById("name").value =""){
+            alert("bạn nhập thiếu thông tin");
+            document.getElementById("name").focus();
+            return false;
+        }
+        QuanLySanPhamList.push(newData);
+        display(QuanLySanPhamList);
+        document.getElementById("name").value ="";
+        alert("bạn đã nhập thành công");
+
+    }
+</script>
+
+</body>
+</html>

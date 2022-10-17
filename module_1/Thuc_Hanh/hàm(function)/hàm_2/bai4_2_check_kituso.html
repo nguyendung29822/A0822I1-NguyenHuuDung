@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết hàm check kí tự nhập vào có phải là kí tự số hay không</title>
+</head>
+<body>
+<script>
+
+       function check(num) {
+           if (num >= "0" || num <= "9") {
+               return true;
+           } else
+               return false;
+
+       }
+       let x = prompt("nhập vào 1 kí tự bất kì");
+        if (check(x)) {
+           document.write("x là kí tự số");
+       } else {
+           document.write("x không phải là kí tự số");
+       }
+
+</script>
+
+</body>
+</html>

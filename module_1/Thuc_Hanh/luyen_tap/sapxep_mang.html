@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng từ bàn phím với độ dài n
+        Hiện thị mảng sau khi thêm mới các phần tử
+        Kiểm tra mảng vừa nhập. Nếu mảng mới nhập đã được sắp xếp ( tăng/giảm dần) thì hiện thị thông báo "OK", nếu
+        không thoả mãn thì hiện thị "NO"
+    </title>
+</head>
+<body>
+<script>
+    let n = +prompt("bạn muốn nhập vào bao nhiêu phần tử :");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let j = i + 1;
+        array[i] = +prompt("phần tử thứ: " + j);
+    }
+
+    function checkArrayIncrese(array) {
+        for (let i = 0; i < array.length - 1; i++) {
+            let check = 0;
+            if (array[i] >= array[i + 1]) {
+                check = 1;
+                return false;
+            }
+        }
+        return true;
+    }
+    // if (checkArrayIncrese(array)) {
+    //     document.write("ok");
+    // } else {
+    //     document.write("no");
+    // }
+
+    function arrayDecrese(array) {
+        for (let i = 0; i < array.length - 1; i++) {
+            let check = 0;
+
+            if (array[i] <= array[i + 1]) {
+                check = 1;
+                return false;
+            }
+        }
+        return true;
+    }
+    // if(arrayDecrese(array)){
+    //     document.write("ok");
+    // }else{
+    //     document.write("no");
+    // }
+    if (checkArrayIncrese(array)|| arrayDecrese(array)) {
+        document.write("OK");
+    } else {
+        document.write("NO");
+    }
+    // document.write(arrayDecrese(array));
+</script>
+</body>
+</html>

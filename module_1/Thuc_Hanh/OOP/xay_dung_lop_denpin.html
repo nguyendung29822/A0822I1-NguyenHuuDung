@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng lớp mô phỏng hoạt động của đèn pin</title>
+</head>
+<body>
+<script>
+    class flashLight {
+        constructor(battery, flashlamp) {
+            this.battery = battery;
+            this.flashlamp = flashlamp;
+        }
+
+        getBattery() {
+            return this.battery;
+        }
+
+        getFlashlamp() {
+            return this.flashlamp;
+        }
+
+        setBattery(battery) {
+            this.battery = battery;
+        }
+
+        setFlashlamp(flashlamp) {
+            this.flashlamp = flashlamp;
+        }
+    }
+
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+
+        getEnergy() {
+            return this.energy;
+        }
+
+        setEnergy(energy) {
+            this.energy = energy;
+        }
+
+        getDecreaseEnergy() {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    }
+
+    class FlashLamp {
+        constructor(battery, status) {
+            this.battery = battery;
+            this.status = status;
+        }
+
+        getBattery() {
+            return this.battery;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setBattery(battery) {
+            this.battery = battery;
+        }
+
+        setStatus(status) {
+            this.status = status;
+        }
+
+        getLight() {
+            if (this.status) {
+                alert("Lightning");
+            } else {
+                alert("Not Lightning");
+            }
+        }
+
+        getBatteryInfo() {
+            return this.battery.getBattery();
+        }
+
+        getTurnOn() {
+            return this.status = true;
+        }
+
+        getTurnOff() {
+            return this.status = false;
+        }
+    }
+
+    let battery = new Battery(100);
+    let flashlamp = new FlashLamp(battery, status);
+    let turnOn = flashlamp.getTurnOn();
+    let turnOff = flashlamp.getTurnOff();
+    alert("bóng đèn bật " + turnOn);
+    alert("bóng đèn tắt " + turnOff);
+
+</script>
+
+</body>
+</html>

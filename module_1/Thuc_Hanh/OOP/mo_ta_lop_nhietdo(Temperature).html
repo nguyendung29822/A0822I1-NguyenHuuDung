@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng lớp mô tả nhiệt độ</title>
+</head>
+<body>
+<script>
+    class Temp {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        getDoC() {
+            return this.doC;
+        }
+
+        setDoC(doC) {
+            this.doC = doC;
+        }
+
+        getDoF() {
+            return this.doC * (9 / 5) + 32;
+        }
+
+        getKenvin() {
+            return this.doC + 273.15;
+        }
+    }
+
+    let doC = new Temp(25);
+    let DoF = doC.getDoF();
+    let Kenvin = doC.getKenvin();
+    alert("25 độ C sang F là : " + DoF);
+    alert("25 độ C sang Kenvin là : " + Kenvin);
+
+
+    doC.setDoC(30);
+    doC = doC.getDoC();
+    alert("30 độ C sang F là : " + DoF);
+    alert("30 độ C sang Kenvin là : " + Kenvin);
+
+
+</script>
+
+</body>
+</html>

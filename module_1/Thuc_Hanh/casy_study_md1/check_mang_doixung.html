@@ -15,9 +15,10 @@
 
 
     }
-    for (let i = 0; i < numArray / 2; i++) {
-        if (numArray[i] != numArray[myArray - 1-i]) {
+    for (let i = 0; i <= numArray.length / 2; i++) {
+        if (numArray[i] !== numArray[myArray - 1-i]) {
             count = 0;
+            break;
         }
     }
     if (count == 0) {

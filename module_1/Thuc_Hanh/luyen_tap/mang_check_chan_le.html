@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng từ bàn phím với độ dài n
+        Hiện thị mảng sau khi thêm mới các phần tử
+        Kiểm tra mảng vừa nhập. Nếu số phần tử chẵn bằng số phần tử lẻ thì hiện thị thông báo "OK", nếu không thoả mãn
+        thì hiện thị "NO"
+    </title>
+</head>
+<body>
+<script>
+    let n = +prompt("bạn muốn nhập vào mảng bao nhiêu phần tử");
+    let array = [];
+    let count = 0;
+    let counts = 0;
+    for (let i = 0; i < n; i++) {
+        let j = i + 1;
+        array [i] = +prompt("phần tử thứ: " + j);
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 0) {
+            count += 1;
+        }else{
+            counts+=1;
+        }
+    }
+    if(count == counts){
+        document.write("OK");
+    }else {
+        document.write("NO");
+    }
+</script>
+</body>
+</html>

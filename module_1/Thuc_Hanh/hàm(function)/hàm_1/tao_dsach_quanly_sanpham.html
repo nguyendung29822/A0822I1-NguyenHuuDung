@@ -8,6 +8,7 @@
 <h3>Add New Product</h3>
 <input type="text" id="name" placeholder="new product">
 <input type="text" id="origin" placeholder="made in">
+<input type="text" id="year" placeholder="year of manufacture">
 <input type="button" value="ADD" id="btn-add" onclick="add()">
 <h3>Display All Product</h3>
 <h4>Product Name</h4>
@@ -17,9 +18,10 @@
 
 <script>
     class shopDT {
-        constructor(name, origin) {
+        constructor(name, origin, year) {
             this.name = name;
             this.origin = origin;
+            this.year = year;
         }
 
         getName() {
@@ -30,6 +32,10 @@
             return this.origin;
         }
 
+        getYear() {
+            return this.year;
+        }
+
         setName(name) {
             this.name = name;
         }
@@ -37,12 +43,16 @@
         setOrigin(origin) {
             this.origin = origin;
         }
+
+        setYear(year) {
+            this.year = year;
+        }
     }
 
     let shopDTList = [];
-    let may1 = new shopDT("Iphone", "My");
-    let may2 = new shopDT("Samsung", "Korea");
-    let may3 = new shopDT("Bphone", "Viet Nam");
+    let may1 = new shopDT("Iphone", "My", "1994");
+    let may2 = new shopDT("Samsung", "Korea", "2022");
+    let may3 = new shopDT("Bphone", "Viet Nam", "1996");
 
     shopDTList.push(may1);
     shopDTList.push(may2);
@@ -55,14 +65,16 @@
             '<tr>\n' +
             '<th>TenSP</th>\n' +
             '<th>XuatXuSP</th>\n' +
+            '<th>NamSX</th>\n' +
             '</tr>';
         for (let i = 0; i < list.length; i++) {
             data += '<tr>\n' +
                 '<td>' + list[i].getName() + '</td>' +
                 '<td>' + list[i].getOrigin() + '</td>' +
-                '<td><input type="button" onclick="edit(' + i + ')" value="Edit"></td>' +
-                '<td><input type="button" onclick="del(' + i + ')" value="Delete"></td>' +
-                '</tr>';
+                '<td>' + list[i].getYear() + '</td>' +
+            '<td><input type="button" onclick="edit(' + i + ')" value="Edit"></td>' +
+            '<td><input type="button" onclick="del(' + i + ')" value="Delete"></td>' +
+            '</tr>';
         }
         data += '</table>';
         document.getElementById("hienThi").innerHTML = data;
@@ -74,7 +86,8 @@
     function add() {
         let name = document.getElementById("name").value;
         let origin = document.getElementById("origin").value;
-        let newData = new shopDT(name, origin);
+        let year = document.getElementById("year").value;
+        let newData = new shopDT(name, origin,year);
         if (document.getElementById("name").value == "") {
             alert("bạn nhập thiếu thông tin");
             document.getElementById("name").focus();
@@ -85,10 +98,16 @@
             document.getElementById("origin").focus();
             return false;
         }
+        if(document.getElementById("year").value==""){
+            alert("bạn nhập thiếu thông tin");
+            document.getElementById("year").focus();
+            return false;
+        }
         shopDTList.push(newData);
         display(shopDTList);
         document.getElementById("name").value = "";
         document.getElementById("origin").value = "";
+        document.getElementById("year").value = "";
         alert("bạn đã nhập thành công");
 
     }
@@ -96,6 +115,7 @@
     function edit(index) {
         let newName = prompt("nhập tên sản phẩm");
         let newOrigin = prompt("nhập nơi sản xuất");
+        let newYear = prompt("nhập năm sản xuất");
 
         if (newName == "") {
             alert("bạn nhập thiếu thông tin");
@@ -107,14 +127,21 @@
             document.getElementById("origin").focus();
             return false;
         }
+        if(newYear == ""){
+            alert("bạn nhập thiếu thông tin");
+            document.getElementById("year").focus();
+            return false;
+        }
         shopDTList[index].setName(newName);
         shopDTList[index].setOrigin(newOrigin);
+        shopDTList[index].setYear(newYear);
         alert("bạn nhập thành công");
         display(shopDTList);
 
     }
+
     function del(index) {
-        shopDTList.splice(index,1);
+        shopDTList.splice(index, 1);
         display(shopDTList);
 
     }

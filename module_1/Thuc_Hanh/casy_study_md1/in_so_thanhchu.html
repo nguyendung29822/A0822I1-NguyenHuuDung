@@ -6,26 +6,23 @@
         là một hai ba bốn.</title>
 </head>
 <body>
-<input type="text" id="numbers"/>
-<input type="button" id="translate" value="change" onclick="letter()"/>
-<p id="result:"></p>
 <script>
-    let a = [1,2,3,4];
-    let b = ["một", "hai", "ba","bốn"];
-
-    function letter(){
-        let keyWork = document.getElementById("numbers").value;
-        for (let i = 0; i < a.length; i++) {
-            if (keyWork === a[i]) {
-                document.getElementById("result:").innerText = b[i];
-
+    let a = ["1", "2", "3", "4"];
+    let b = ["một", "hai", "ba", "bốn"];
+    let result = [];
+    let str = prompt("string of number");
+    let toArray = str.split("");
+    for (let i = 0; i < toArray.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (toArray[i] === a[j]) {
+                result.push(b[j]);
             }
-
-
         }
-
-
     }
+    document.write(result);
+
+
+
 </script>
 
 </body>

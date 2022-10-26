@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng ứng dụng mô phỏng câu chuyện adam và eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, wight) {
+            this.name = name;
+            this.gender = gender;
+            this.wight = wight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        getWight() {
+            return this.wight;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        setWight(wight) {
+            this.wight = wight;
+        }
+
+        say(text) {
+            console.log(text);
+        }
+
+        eat(apple) {
+            if (apple.weight > 0) {
+                apple.weight--;
+                this.wight++;
+                console.log("cho 1 miếng" + this.name);
+            } else {
+                console.log("hết táo rồi nhé");
+            }
+            console.log(this.wight);
+        }
+    }
+
+    let apple = new Apple(10);
+    let adam = new Human("adam", "male", 80);
+    let eva = new Human("eva", "female", 50);
+   for (let i = 0; i < 11; i++) {
+        adam.eat(apple);
+        eva.eat(apple);
+    }
+    let adam1 = adam.getName();
+    let eva1 = eva.getName()
+    alert("tên :" + adam1);
+    alert("tên :" + eva1);
+    let wight1 = adam.getWight();
+    let wight2 = eva.getWight();
+    let wight3 = apple.getWeight();
+    alert("trọng lượng của adam sau khi ăn táo là: " + wight1);
+    alert("trọng lượng của eva sau khi ăn táo là: " + wight2);
+    alert("trọng lượng của táo :" +wight3);
+
+
+</script>
+
+</body>
+</html>

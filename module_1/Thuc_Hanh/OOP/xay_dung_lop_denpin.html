@@ -78,11 +78,6 @@
                 alert("Not Lightning");
             }
         }
-
-        getBatteryInfo() {
-            return this.battery.getBattery();
-        }
-
         getTurnOn() {
             return this.status = true;
         }
@@ -98,6 +93,8 @@
     let turnOff = flashlamp.getTurnOff();
     alert("bóng đèn bật " + turnOn);
     alert("bóng đèn tắt " + turnOff);
+    light = flashlamp.getLight();
+    alert(light);
 
 </script>
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khai báo 1 mảng số nguyên từ bàn phím với độ dài n.
+        Nhập các phần tử cho mảng với một số nguyên lớn hơn 10 và nhỏ hơn 100.
+        Hiện thị mảng sau khi thêm mới các phần tử
+        Viết chương trình hiện thị các phần tử của mảng có hàng đơn vị lớp hơn hàng chục ví dụ: [11, 12, 21 , 56, 19] =>
+        kết quả hiện thị ra 12,56,19
+    </title>
+</head>
+<body>
+<script>
+    let n = +prompt("bạn muốn nhập vào bao nhiêu phần tử cho mảng :");
+    let nArray = [];
+    for (let i = 0; i < n; i++) {
+        let j = i + 1;
+        nArray[i] = +prompt("phần tử thứ " + j);
+        if (nArray[i] <= 10 || nArray[i] >= 100) {
+            alert("mời bạn nhập lại");
+            nArray[i] = +prompt("phần tử thứ " + j);
+        }
+    }
+    let getNums = [];
+    for (let i = 0; i < nArray.length; i++) {
+        let temp = nArray[i].split("");
+        if (temp[0] < temp[1]) {
+            getNums.push(temp.join(""));
+        } else {
+            continue;
+        }
+    }
+</script>
+
+</body>
+</html>

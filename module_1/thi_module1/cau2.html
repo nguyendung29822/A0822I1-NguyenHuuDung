@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào 1 chuỗi kí tự từ bàn phím ");
+
+    function checkStr(str) {
+        let strArray = str.split("");
+        let i = 0;
+        let j = strArray.length - 1;
+        while (i < j) {
+            if (strArray[i] == strArray[j]) {
+                i++;
+                j--;
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+    if (checkStr(str) == true) {
+        document.write("chuoi " + str + " la chuoi doi xung" + "<br>");
+    } else {
+        document.write("chuoi " + str + " la chuoi khong doi xung");
+    }
+
+</script>
+</body>
+</html>

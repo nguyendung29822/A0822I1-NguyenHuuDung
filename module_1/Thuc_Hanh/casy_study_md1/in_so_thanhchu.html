@@ -7,19 +7,19 @@
 </head>
 <body>
 <script>
-    let a = ["1", "2", "3", "4"];
-    let b = ["một", "hai", "ba", "bốn"];
+    let a = ["1", "2", "3", "4","5","6","7","8","9"];
+    let b = ["một", "hai", "ba", "bốn","năm","sáu","bảy","tám","chín"];
     let result = [];
     let str = prompt("string of number");
     let toArray = str.split("");
     for (let i = 0; i < toArray.length; i++) {
         for (let j = 0; j < a.length; j++) {
-            if (toArray[i] === a[j]) {
+            if (toArray[i] == a[j]) {
                 result.push(b[j]);
             }
         }
     }
-    document.write(result);
+    console.log(result);
 
 
 

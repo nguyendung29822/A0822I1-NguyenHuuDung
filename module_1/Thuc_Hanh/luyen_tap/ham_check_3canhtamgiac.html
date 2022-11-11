@@ -7,7 +7,7 @@
 <body>
 <script>
     function checkTriangle(x,y,z) {
-        let a = "là 1 tam giác";
+        let a = "chỉ là 3 cạnh của 1 tam giác";
         let b = "không tạo thành 1 tam giác";
         let c = "là 3 cạnh của 1 tam giác vuông";
         if (x + z > y && y + z > x && x + y > z) {
@@ -20,7 +20,7 @@
             return  b;
         }
     }
-    checkTriangle();
+    //let temp = checkTriangle(x1,y1,z1);
     let x1 = +prompt("nhập vào độ dài của cạnh x ");
     let y1 = +prompt("nhập vào độ dài của cạnh y ");
     let z1 = +prompt("nhập vào độ dài của cạnh z ");

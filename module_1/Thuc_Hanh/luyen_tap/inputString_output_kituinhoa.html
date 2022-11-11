@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi), (checkString(str))
+        Hàm trả về một chuỗi là tất cả các ký tự in Hoa có trong chuỗi
+        Ví dụ: Hello CoDeGym => HCDG
+    </title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào 1 chuỗi bất kì ");
+    let strArray = str.split("");
+    let newArray = [];
+    checkString(str);
+    function checkString(str) {
+        for (let i = 0; i < strArray.length; i++) {
+            if (strArray[i] >= "A" && strArray[i] <= "Z") {
+                newArray.push(strArray[i]);
+                newArray.join("");
+            }
+        }
+    }
+    document.write("hàm trả về là : "+newArray);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi), (checkString(str))
+        "Thực hiện kiểm tra. Nếu số ký tự in Hoa bằng ký tự in thường thì trả về true. Ngược lại trả về false
+        "
+    </title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào 1 chuỗi bất kì");
+    let strArray = str.split("");
+    let count1 = 0;
+    let count2 = 0;
+    checkString(str);
+
+    function checkString() {
+        for (let i = 0; i < strArray.length; i++) {
+            if (strArray[i] >= "a" && strArray[i] <= "z") {
+                count1 += 1;
+            }
+        }
+        for (let i = 0; i < strArray.length; i++) {
+            if (strArray[i] >= "A" && strArray[i] <= "Z") {
+                count2 += 1;
+            }
+        }
+        // if (count1 === count2) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+    }
+    if(count1 === count2){
+        document.write("true");
+    }else {
+        document.write("false");
+    }
+</script>
+
+</body>
+</html>

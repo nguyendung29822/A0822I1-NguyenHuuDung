@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng từ bàn phím với độ dài n
+        Hiện thị mảng sau khi thêm mới các phần tử
+        "Đếm số lượng số có giá trị bằng giá trinh trung bình của mảng.
+        "
+        "
+        Ví dụ [1,2,2,3,3,5,4,4] => số lượng số bằng với giá trị trung bình của các phần tử trong mảng là 2 ( vì giá trị
+        trung bình các phần tử trong mảng là 3=> số 3 xuất hiện 2 lần)"
+    </title>
+</head>
+<body>
+<script>
+    let n = +prompt("số phần tử muốn nhập vào mảng là ");
+    let nArray = [];
+    let count = 0;
+    let sum = 0;
+    let avgArray = 0;
+    for (let i = 0; i < n; i++) {
+        let j = i + 1;
+        nArray[i] = +prompt("phần tử thứ " + j);
+    }
+    for (let i = 0; i < nArray.length; i++) {
+        sum += nArray[i];
+        avgArray = sum / nArray.length;
+
+    }
+    document.write(sum + "<br>");
+    document.write(avgArray + "<br>");
+
+    for (let i = 0; i < nArray.length; i++) {
+        if (nArray[i] == avgArray) {
+            count += 1;
+        }
+    }
+
+    document.write("mảng vừa nhập là " + nArray + "<br>");
+    document.write("số lượng số có giá trị bằng giá trị trung bình của mảng là " + count);
+</script>
+
+</body>
+</html>

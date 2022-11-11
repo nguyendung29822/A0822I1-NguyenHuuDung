@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6 Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi), (checkString(str))
+        "Hàm trả về mảng các ký tự là nguyên âm có trong mảng
+        "
+    </title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào 1 chuỗi");
+    let strArray = str.split("");
+    let arrayVoWel = ["o", "O", "u", "U", "i", "I", "a", "A", "e", "E"];
+    let newArray = [];
+    checkString(str);
+    function checkString(str) {
+        for (let i = 0; i < strArray.length; i++) {
+            for (let j = 0; j < arrayVoWel.length; j++) {
+                if (strArray[i] === arrayVoWel[j]) {
+                    newArray.push(strArray[i]);
+                }
+            }
+        }
+    }
+    document.write("hàm trả về mảng các kí tự nguyên âm có trong mảng là "+newArray);
+</script>
+
+</body>
+</html>

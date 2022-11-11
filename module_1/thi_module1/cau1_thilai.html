@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("mời bạn nhập vào số phần tử của mảng(không quá 50 phần tử  ");
+    while (num > 50) {
+        alert("mời bạn nhập lại");
+        num = +prompt("mời bạn nhập số lượng phần tử vào mảng ");
+    }
+    let array = [];
+    for (let i = 0; i < num; i++) {
+        let j = i + 1;
+        array[i] = prompt("phần tử thứ " + j);
+    }
+    document.write("mảng vừa nhập là " + array + "<br>");
+    let newArray = [];
+    let avg = 0;
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 3 == 0) {
+            newArray.push(array[i]);
+            newArray.join("");
+        }
+    }
+    document.write(newArray);
+    for (let i = 0; i < newArray.length; i++) {
+        sum += newArray[i]*1;
+        avg = sum / newArray.length;
+    }
+
+    document.write("hiển thị trung bình cộng các số trong mảng chia hết cho 3 là " + avg);
+</script>
+
+</body>
+</html>

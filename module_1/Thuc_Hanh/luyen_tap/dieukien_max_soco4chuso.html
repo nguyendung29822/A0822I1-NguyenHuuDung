@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 Viết 1 hàm truyền vào 1 tham số findMaxNumber(n)
+        Hàm thực hiện các công việc
+        +Kiểm tra n phải là 1 số có 4 chữ số?
+        + Nếu không thoả mãn là 4 chữ số thì trả về -1
+        + Nếu thoả mãn là 4 chữ số tiếp tục thực hiện công việc:
+        Tìm ra một số có 3 chữ số từ n ( bằng cách xoá đi một chữ số bất kỳ của n) để có được 1 số là lớn nhất
+    </title>
+</head>
+<body>
+<script>
+
+    function finMaxNumber(n) {
+        if ((n > -10000 && n <= -1000) || (n >= 1000 && n < 10000)) {
+            if (n > 0) {
+                let toFindNum = [];
+                let toArr = n.split("");
+                for (let i = 0; i < toArr.length; i++) {
+                    toArr = n.split("");
+                    toArr.splice(i, 1);
+                    toFindNum.push(toArr.join(""));
+                }
+                let max = toFindNum[0];
+                for (let i = 0; i < toFindNum.length; i++) {
+                    if (max < toFindNum[i]) {
+                        max = toFindNum[i];
+                    }
+                }
+                return max;
+
+
+            }else if(n<0){
+                let toFindNum = [];
+                for(let i=0;i<n.length;i++){
+                    let tempArr = n.split("");
+                    tempArr.splice(i,1);
+                    let temp = tempArr.join("");
+                    toFindNum.push(temp);
+                    console.log(toFindNum);
+                }
+                let min = toFindNum[0];
+                for(let i=0;i<toFindNum.length;i++){
+                    if(min >toFindNum[i]){
+                        min = toFindNum[i];
+                    }
+                }
+                return min;
+
+            }
+        }else{
+            return "-1";
+        }
+    }
+    let n = prompt("nhập vào 1 số bất kì");
+    let findNum = finMaxNumber(n);
+    document.write(n);
+    document.write("<br>");
+    document.write(findNum);
+</script>
+
+</body>
+</html>

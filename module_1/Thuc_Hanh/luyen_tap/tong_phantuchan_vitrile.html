@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng số từ bàn phím với độ dài n
+        Hiện thị mảng sau khi thêm mới các phần tử
+        Tính tổng các phần tử tử chẵn và ở vị trí lẻ
+    </title>
+</head>
+<body>
+<script>
+    let n = +prompt("bạn muốn nhập vào bao nhiêu phần tử trong mảng");
+    let nArray = [];
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        let j = i + 1;
+        nArray[i] = +prompt("phần tử thứ " + j);
+    }
+    for (let i = 0; i < nArray.length; i++) {
+        if (nArray[i] % 2 == 0 && i % 2 != 0) {
+            sum += nArray[i];
+        }
+    }
+    document.write("sum mảng là :" + sum);
+
+</script>
+
+</body>
+</html>

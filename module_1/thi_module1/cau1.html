@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("mời bạn nhập vào số phần tử của mảng(không quá 20 phần tử)");
+    while (num > 20) {
+        alert("mời bạn nhập lại");
+        num = +prompt("mời bạn nhập số lượng phần tử vào mảng");
+    }
+    let numArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    let array = [];
+    for (let i = 0; i < num; i++) {
+        array[i] = prompt("phần tử thứ " + i);
+        for (let j = 0; j < numArr.length; j++) {
+            if (array[i] == numArr[j]) {
+                alert("bạn chỉ được nhập kiểu kí tự");
+                array[i] = prompt("phần tử thứ" + i);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

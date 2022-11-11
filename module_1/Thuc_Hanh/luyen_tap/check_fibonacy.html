@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng số từ bàn phím với độ dài n
+        Hiện thị mảng sau khi thêm mới các phần tử
+        Kiểm tra mảng vừa nhập. Nếu tất cả các phần tử trong mảng đều thuộc dãy số fibonacy thì hiện thị thông báo "OK",
+        nếu không thoả mãn thì hiện thị "NO"
+    </title>
+</head>
+<body>
+<script>
+    let n = +prompt("bạn muốn nhập bao nhiêu phần tử vào mảng ");
+    let nArray = [];
+    for (let i = 0; i < n; i++) {
+        let j = i + 1;
+        nArray[i] = +prompt("phần tử thứ " + j);
+    }
+    document.write("mảng mới nhập là " + nArray + "<br>");
+
+    function check(nArray) {
+        let count = 0;
+        for (let i = 0; i < nArray.length; i++) {
+            if (nArray[i] == 1 || nArray[i] == 2) {
+                document.write(nArray[i]);
+            } else {
+                document.write(check(nArray[i] - 1) + check(nArray[i] - 2));
+            }
+            count ++;
+
+        }
+
+        if (nArray.length == count) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    if (check(nArray) == true) {
+        document.write("OK");
+    } else {
+        document.write("NO");
+    }
+
+
+</script>
+
+</body>
+</html>

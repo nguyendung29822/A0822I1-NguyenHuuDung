@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập vào 1 số nguyên dương");
+    while (n < 0) {
+        alert("mời bạn nhập lại");
+        n = +prompt("nhập vào 1 số nguyên dương");
+    }
+
+    function inputNum(n) {
+        let sum = 0;
+        for (let i = 0; i < n; i++) {
+            if (n % i == 0) {
+                sum += i;
+            }
+        }
+        if (n == sum) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    if(inputNum(n)==true){
+        document.write("true");
+    }else {
+        document.write("false");
+    }
+
+
+</script>
+</body>
+</html>

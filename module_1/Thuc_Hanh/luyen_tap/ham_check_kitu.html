@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi), (checkString(str))
+        "Hàm trả về mảng các ký tự không phải là số[0,….9] và không phải là ký tự alphabet[a…z,A,…Z]
+        "
+    </title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào một chuỗi bất kì ");
+
+    function checkString(str) {
+        let strArray = str.split("");
+        for (let i = 0; i < strArray.length; i++) {
+            if (strArray[i] >= 0 && strArray[i] <= 9) {
+                strArray.splice(i, 1);
+                i--;
+            }
+        }
+
+        for (let i = 0; i < strArray.length; i++) {
+            if (strArray[i] >= "a" && strArray[i] <= "z") {
+                strArray.splice(i, 1);
+                i--;
+            }
+        }
+        for (let i = 0; i < strArray.length; i++) {
+            if (strArray[i] >= "A" && strArray[i] <= "Z") {
+                strArray.splice(i, 1);
+                i--;
+
+            }
+        }
+        return strArray.join("");
+    }
+
+
+    document.write(checkString(str));
+
+</script>
+</body>
+</html>

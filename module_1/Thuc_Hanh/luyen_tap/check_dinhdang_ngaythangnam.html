@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào tham số là một chuỗi.. checkDate(dateString)
+        Kiểm tra xem chuối nhập vào dateString có phải là định dạng của ngày tháng năm hay không ( dd/mm/yyyy)
+        Nếu đúng return true, sai return false
+    </title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào 1 chuỗi bất kì");
+    let strArray = str.split("");
+    const STR = "dd/mm/yyyy";
+    let arrayFormat = STR.split("");
+    function checkDate(str) {
+        if (strArray.length == arrayFormat.length) {
+            if (strArray[2] == arrayFormat[2] && strArray[5] == arrayFormat[5]) {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+    if(checkDate(str)==true){
+        document.write("ok");
+    }else{
+        document.write("no");
+    }
+</script>
+
+</body>
+</html>

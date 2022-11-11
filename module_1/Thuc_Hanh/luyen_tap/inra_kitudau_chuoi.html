@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi), (checkString(str))
+        "Hàm trả về Từ viết tắt của chuỗi
+        "
+        "Nếu chuỗi chỉ có 1 từ thì trả về từ đó . Ví dụ : ""Hello"" => ""Hello""
+        "
+        Nếu chuỗi từ 2 từ trở lên thì trả về chuỗi gồm các ký tự đầu tiên của một từ. Ví dụ:" Object Oriented
+        Programming" => OOP
+    </title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào 1 chuỗi bất kì ");
+    let strArray = str.split("");
+    let newArray = [];
+    checkString(str);
+    function checkString(str) {
+        for (let i = 0; i < strArray.length; i++) {
+            if (strArray.length == 1) {
+                newArray.push(strArray[i]);
+            } else {
+                let nArray = strArray[i].split("");
+                for (let j = 0; j < nArray.length; j++) {
+                   newArray.push(nArray[0]);
+                }
+            }
+        }
+    }
+    document.write(newArray);
+</script>
+
+</body>
+</html>

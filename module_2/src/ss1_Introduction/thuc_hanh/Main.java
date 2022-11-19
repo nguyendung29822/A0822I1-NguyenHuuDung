@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+package ss1_Introduction.thuc_hanh;
 
 public class Main {
     public static void main(String[] args) {

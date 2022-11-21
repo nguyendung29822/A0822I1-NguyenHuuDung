@@ -1,4 +1,6 @@
-package ss4_class_object.bai_tap;
+package ss4_class_object.bai_tap.Phuong_Trinh_Bac_2;
+
+import java.util.Scanner;
 
 public class QuadraticEquation {
     private double a, b, c;
@@ -42,7 +44,6 @@ public class QuadraticEquation {
     }
 
 
-
     public double getRood1(double delta) {
         if (delta < 0) {
             return 0;
@@ -58,6 +59,7 @@ public class QuadraticEquation {
             return (-1 * b + Math.sqrt(delta)) / 2 * a;
         }
     }
-
-
 }
+
+
+

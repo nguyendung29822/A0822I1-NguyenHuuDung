@@ -4,7 +4,7 @@ public class Shape {
     private double side = 0.0;
     private String color = "black";
 
-    public Shape() {
+    public Shape(String color) {
     }
 
     public Shape(double side, String color) {
@@ -29,6 +29,6 @@ public class Shape {
     }
 
     public String toString() {
-        return "(" + this.getSide() + "," + this.getColor() + ")";
+        return "(" + getSide() + "," + getColor() + ")";
     }
 }

@@ -1,29 +1,24 @@
 package ss6_ke_thua.triangle_shape;
 
-public class Triangle {
-    private double side1 = 1.0;
-    private double side2 = 1.0;
-    private double side3 = 1.0;
-    private String color = "red";
+public class Triangle extends Shape {
+    private double side1 = 0.0;
+    private double side2 = 0.0;
+    private double side3 = 0.0;
 
     final double H = 4.0;
 
-    public static void Triangle() {
-    }
-
-    public Triangle(double side1, double side2, double side3, String color) {
+    public Triangle(String color, double side1, double side2, double side3) {
+        super(color);
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
-        this.color = color;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
+    public Triangle(double side, String color, double side1, double side2, double side3) {
+        super(side, color);
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
     }
 
     public double getSide1() {
@@ -51,14 +46,14 @@ public class Triangle {
     }
 
     public double getArea() {
-        return (this.getSide1() * H) / 2;
+        return (getSide1() * H) / 2;
     }
 
     public double getPerimeter() {
-        return this.getSide1() + this.getSide2() + this.getSide3();
+        return getSide1() + getSide2() + getSide3();
     }
 
     public String toString() {
-        return "(" + this.getArea() + "," + this.getPerimeter() + "," + this.getColor() + ")";
+        return "(" + getArea() + "," + getPerimeter() + "," + getColor() + ")";
     }
 }

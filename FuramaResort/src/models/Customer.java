@@ -5,6 +5,7 @@ public class Customer extends Person{
     protected String myAddress;
     protected String customerType;
 
+
     public Customer(){}
 
     public Customer(String customersCode, String myAddress, String customerType) {

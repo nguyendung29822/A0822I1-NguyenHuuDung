@@ -6,6 +6,7 @@ public class FuramaController {
     public void displayMainMenu() {
         boolean point = true;
         do {
+            System.out.println("------MENU------");
             System.out.println("chức năng của hệ thống : " +
                     "\n 1. Employee Management" +
                     "\n 2. Customer Management" +

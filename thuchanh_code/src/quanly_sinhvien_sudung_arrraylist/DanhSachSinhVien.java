@@ -53,6 +53,18 @@ public class DanhSachSinhVien {
         }
     }
 
+    public void suaThongtin(SinhVien maSV) {
+        for (int i = 0; i < danhSach.size(); i++) {
+            if (danhSach.get(i).getMaID().equals(maSV.getMaID())) {
+                danhSach.set(i, maSV);
+            }
+        }
+    }
+
+    public boolean kiemTraMaSV(String maSV) {
+        return this.danhSach.contains(maSV);
+    }
+
     public void sapXepSinhVienGiamDanTheoDiem() {
         Collections.sort(this.danhSach, new Comparator<SinhVien>() {
             @Override
@@ -62,13 +74,12 @@ public class DanhSachSinhVien {
                 } else if (sv1.getDiemTB() > sv2.getDiemTB()) {
                     return -1;
                 } else {
-                    return  0;
+                    return 0;
 
                 }
             }
         });
     }
-
 
 
 }

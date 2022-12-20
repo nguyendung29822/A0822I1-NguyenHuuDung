@@ -59,7 +59,7 @@ public class Main {
                     double giaSanPham = sc.nextDouble();
                     Product p = new Product(tenSanPham, hangSanXuat, codeProduct, giaSanPham);
                     productManager.suaSanPham(p);
-                    System.out.println("Edit successfull!");
+                    System.out.println("Edit successful!");
                 }else {
                     break;
                 }

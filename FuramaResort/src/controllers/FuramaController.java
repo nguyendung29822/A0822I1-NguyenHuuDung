@@ -1,9 +1,13 @@
 package controllers;
 
+import models.Employee;
+import services.impl.EmployeeService;
+
 import java.util.Scanner;
 
 public class FuramaController {
-    public void displayMainMenu() {
+    EmployeeService employee = new EmployeeService();
+    public void displayMenu() {
         boolean point = true;
         do {
             System.out.println("------MENU------");
@@ -17,6 +21,7 @@ public class FuramaController {
             Scanner scanner = new Scanner(System.in);
             System.out.println("select function");
             int choose = Integer.parseInt(scanner.nextLine());
+
             switch (choose) {
                 case 1:
                     System.out.println("Employee Management" +
@@ -24,13 +29,14 @@ public class FuramaController {
                             "\n 2.Add new employee" +
                             "\n 3.Edit employee" +
                             "\n 4.Return main menu");
-                    break;
+
                 case 2:
                     System.out.println("Customer Management" +
                             "\n 1.Customer Management" +
                             "\n 2.Add new customer" +
                             "\n 3.Edit customer" +
                             "\n 4.Return main menu");
+
                     break;
                 case 3:
                     System.out.println("Facility Management" +
@@ -59,6 +65,7 @@ public class FuramaController {
 
 
             }
+
 
         } while (point);
     }

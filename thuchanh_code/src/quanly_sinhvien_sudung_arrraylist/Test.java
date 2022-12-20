@@ -20,6 +20,7 @@ public class Test {
                     "7.Xoa Mot Sinh Vien Ra Khoi Danh Sach Dua Tren Ma Sinh Vien\n" +
                     "8.tim Kiem Tat Ca Sinh Vien Dua Tren Ten Duoc Tim Kiem Tu Ban Phim\n" +
                     "9.Xuat Ra Danh Sach Sinh Vien Co Diem Tu Cao Den Thap\n" +
+                    "10.Sửa thông tin sinh viên theo mã sinh viên"+
                     "0.Thoat Chuong Trinh\n");
             choise = sc.nextInt();
             sc.nextLine();
@@ -67,6 +68,23 @@ public class Test {
             } else if (choise == 9) {
                 dssv.sapXepSinhVienGiamDanTheoDiem();
                 dssv.inDanhSachSinhVien();
+            }else if(choise==10){
+                System.out.println("mời nhập mã sinh viên cần sửa :");
+                String maSV = sc.nextLine();
+                System.out.println("kết quả tìm kiếm là :"+dssv.kiemTraMaSV(maSV));
+                boolean ketQua = dssv.kiemTraMaSV(maSV);
+                if(ketQua){
+                    System.out.println("nhap ho va ten :");
+                    String hoVaTen = sc.nextLine();
+                    System.out.println("nhap nam sinh :");
+                    int namSinh = sc.nextInt();
+                    System.out.println("nhap diem trung binh :");
+                    double dTB = sc.nextDouble();
+                    SinhVien sv = new SinhVien(maSV, hoVaTen, namSinh, dTB);
+                    dssv.suaThongtin(sv);
+                    System.out.println("Edit successful !");
+                }
+
             }
         } while (choise != 0);
     }

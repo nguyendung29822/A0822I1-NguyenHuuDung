@@ -4,7 +4,7 @@ public class Employee extends Person{
     protected String employeeCode;
     protected double monthlySalary;
     protected String academicLevel;
-    protected String YourPosition;
+    protected String yourPosition;
 
     public Employee() {
     }
@@ -13,7 +13,7 @@ public class Employee extends Person{
         this.employeeCode = employeeCode;
         this.monthlySalary = monthlySalary;
         this.academicLevel = academicLevel;
-        YourPosition = yourPosition;
+        this.yourPosition = yourPosition;
     }
 
     public Employee(String fullName, int dateOfBirth, int phoneNumber, String numId, String sex, String eMail, String employeeCode, double monthlySalary, String academicLevel, String yourPosition) {
@@ -21,7 +21,7 @@ public class Employee extends Person{
         this.employeeCode = employeeCode;
         this.monthlySalary = monthlySalary;
         this.academicLevel = academicLevel;
-        YourPosition = yourPosition;
+        this.yourPosition = yourPosition;
     }
 
     public String getEmployeeCode() {
@@ -49,10 +49,22 @@ public class Employee extends Person{
     }
 
     public String getYourPosition() {
-        return YourPosition;
+        return yourPosition;
     }
 
     public void setYourPosition(String yourPosition) {
-        YourPosition = yourPosition;
+        this.yourPosition = yourPosition;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeCode='" + employeeCode + '\'' +
+                ", monthlySalary=" + monthlySalary +
+                ", academicLevel='" + academicLevel + '\'' +
+                ", yourPosition='" + yourPosition + '\'' +
+                '}';
+    }
+
+
 }

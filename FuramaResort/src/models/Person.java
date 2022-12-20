@@ -67,4 +67,16 @@ public abstract class Person {
     public void seteMail(String eMail) {
         this.eMail = eMail;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fullName='" + fullName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", phoneNumber=" + phoneNumber +
+                ", numId='" + numId + '\'' +
+                ", sex='" + sex + '\'' +
+                ", eMail='" + eMail + '\'' +
+                '}';
+    }
 }

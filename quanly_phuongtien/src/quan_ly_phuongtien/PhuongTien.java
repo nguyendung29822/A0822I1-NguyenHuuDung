@@ -2,21 +2,25 @@ package quan_ly_phuongtien;
 
 public class PhuongTien {
     private String bienKiemSoat;
-    private HangSanXuat tenHangSanXuat;
+    private String tenHangSanXuat;
     private int namSanXuat;
     private String chuSoHuu;
 
-    public PhuongTien(String bienKiemSoat, HangSanXuat tenHangSanXuat, int namSanXuat, String chuSoHuu) {
+    public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
         this.bienKiemSoat = bienKiemSoat;
         this.tenHangSanXuat = tenHangSanXuat;
         this.namSanXuat = namSanXuat;
         this.chuSoHuu = chuSoHuu;
     }
 
-    public PhuongTien() {
+    public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu,double congSuat) {
     }
 
-    public PhuongTien(String bienKiemSoat, HangSanXuat tenHangSanXuat, int namSanXuat, String chuSoHuu, String trongTai) {
+
+    public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu, String trongTai) {
+    }
+
+    public PhuongTien(String bienKiemSoat1, String tenHangSanXuat1, int namSanXuat1, String chuSoHuu1, double soChoNgoi, String kieuXe) {
     }
 
     public String getBienKiemSoat() {
@@ -27,11 +31,11 @@ public class PhuongTien {
         this.bienKiemSoat = bienKiemSoat;
     }
 
-    public HangSanXuat getTenHangSanXuat() {
+    public String getTenHangSanXuat() {
         return tenHangSanXuat;
     }
 
-    public void setTenHangSanXuat(HangSanXuat tenHangSanXuat) {
+    public void setTenHangSanXuat(String tenHangSanXuat) {
         this.tenHangSanXuat = tenHangSanXuat;
     }
 

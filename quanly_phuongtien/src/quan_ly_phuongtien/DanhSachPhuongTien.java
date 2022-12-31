@@ -3,16 +3,10 @@ package quan_ly_phuongtien;
 import java.util.ArrayList;
 
 public class DanhSachPhuongTien {
+
     private ArrayList<PhuongTien> xeTai;
     private ArrayList<PhuongTien> xeOto;
     private ArrayList<PhuongTien> xeMay;
-
-
-//    public DanhSachPhuongTien() {
-//        this.xeTai=new ArrayList<PhuongTien>();
-//        this.xeOto=new ArrayList<PhuongTien>();
-//        this.xeMay=new ArrayList<PhuongTien>();
-//    }
 
     public DanhSachPhuongTien(ArrayList<PhuongTien> xeTai, ArrayList<PhuongTien> xeOto, ArrayList<PhuongTien> xeMay) {
         this.xeTai = xeTai;
@@ -56,5 +50,23 @@ public class DanhSachPhuongTien {
         }
     }
 
+    public boolean xoaXeTai(XeTai xt) {
+        return this.xeTai.remove(xt);
+    }
+    public boolean xoaXeOto(Oto oto){
+        return this.xeOto.remove(oto);
+    }
+    public boolean xoaXeMay(XeMay xm){
+        return this.xeMay.remove(xm);
+    }
+    public boolean kiemTraTonTaiBienKiemSoatXeTai(XeTai bienKiemSoatXeTai){
+        return this.xeTai.contains(bienKiemSoatXeTai);
+    }
+    public boolean kiemTraTonTaiBienKiemSoatXeMay(XeMay bienKiemSoatXeMay){
+        return this.xeMay.contains(bienKiemSoatXeMay);
+    }
+    public boolean kiemTraTonTaiBienKiemSoatXeOto(Oto bienKiemSoatXeOto){
+        return this.xeMay.contains(bienKiemSoatXeOto);
+    }
 
 }

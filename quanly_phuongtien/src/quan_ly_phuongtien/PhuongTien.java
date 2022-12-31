@@ -6,21 +6,14 @@ public class PhuongTien {
     private int namSanXuat;
     private String chuSoHuu;
 
+    public PhuongTien() {
+    }
+
     public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
         this.bienKiemSoat = bienKiemSoat;
         this.tenHangSanXuat = tenHangSanXuat;
         this.namSanXuat = namSanXuat;
         this.chuSoHuu = chuSoHuu;
-    }
-
-    public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu,double congSuat) {
-    }
-
-
-    public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu, String trongTai) {
-    }
-
-    public PhuongTien(String bienKiemSoat1, String tenHangSanXuat1, int namSanXuat1, String chuSoHuu1, double soChoNgoi, String kieuXe) {
     }
 
     public String getBienKiemSoat() {
@@ -53,5 +46,15 @@ public class PhuongTien {
 
     public void setChuSoHuu(String chuSoHuu) {
         this.chuSoHuu = chuSoHuu;
+    }
+
+    @Override
+    public String toString() {
+        return "PhuongTien[" +
+                "bienKiemSoat ='" + bienKiemSoat + '\'' +
+                ", tenHangSanXuat ='" + tenHangSanXuat + '\'' +
+                ", namSanXuat =" + namSanXuat +
+                ", chuSoHuu ='" + chuSoHuu + '\'' +
+                ']';
     }
 }

@@ -12,7 +12,6 @@ public class HangSanXuat {
     }
 
     public HangSanXuat() {
-
     }
 
     public String getMaHangSanXuat() {

@@ -10,5 +10,14 @@ public class Oto extends PhuongTien {
         this.kieuXe = kieuXe;
     }
 
+    public Oto(String bienKiemSoatXeOto) {
+    }
 
+    @Override
+    public String toString() {
+        return "Oto{" +
+                "soChoNgoi=" + soChoNgoi +
+                ", kieuXe='" + kieuXe + '\'' +
+                "} " + super.toString();
+    }
 }

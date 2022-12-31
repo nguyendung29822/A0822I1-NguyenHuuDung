@@ -10,9 +10,13 @@ public class XeMay extends PhuongTien {
         this.congSuat = congSuat;
     }
 
-    public XeMay(String congSuat) {
-        this.congSuat = congSuat;
+    public XeMay(String bienKiemSoatXeMay) {
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString() + "XeMay{" +
+                "congSuat='" + congSuat + '\'' +
+                "} ";
+    }
 }

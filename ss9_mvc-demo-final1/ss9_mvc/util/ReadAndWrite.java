@@ -150,6 +150,5 @@ public class ReadAndWrite {
             e.printStackTrace();
         }
         return studentList;
-
     }
 }

@@ -2,14 +2,14 @@ package model;
 
 public class PhuongTien {
     private String bienKiemSoat;
-    private String tenHangSanXuat;
+    private HangSanXuat tenHangSanXuat;
     private int namSanXuat;
     private String chuSoHuu;
 
     public PhuongTien() {
     }
 
-    public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
+    public PhuongTien(String bienKiemSoat, HangSanXuat tenHangSanXuat, int namSanXuat, String chuSoHuu) {
         this.bienKiemSoat = bienKiemSoat;
         this.tenHangSanXuat = tenHangSanXuat;
         this.namSanXuat = namSanXuat;
@@ -24,11 +24,11 @@ public class PhuongTien {
         this.bienKiemSoat = bienKiemSoat;
     }
 
-    public String getTenHangSanXuat() {
+    public HangSanXuat getTenHangSanXuat() {
         return tenHangSanXuat;
     }
 
-    public void setTenHangSanXuat(String tenHangSanXuat) {
+    public void setTenHangSanXuat(HangSanXuat tenHangSanXuat) {
         this.tenHangSanXuat = tenHangSanXuat;
     }
 

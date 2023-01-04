@@ -1,5 +1,10 @@
 package quan_ly_phuongtien;
 
+import quan_ly_phuongtien.model.Oto;
+import quan_ly_phuongtien.model.PhuongTien;
+import quan_ly_phuongtien.model.XeMay;
+import quan_ly_phuongtien.model.XeTai;
+
 import java.util.ArrayList;
 
 public class DanhSachPhuongTien {

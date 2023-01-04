@@ -7,7 +7,7 @@ import util.ConstantUtil;
 import java.util.List;
 import java.util.Scanner;
 
-public class  MainMenu {
+public class MainMenu {
     private static Scanner scanner = new Scanner(System.in);
     private static TruckService truckService = new TruckService();
     private static CarService carService = new CarService();
@@ -77,10 +77,9 @@ public class  MainMenu {
         List<Motor> motors = motorService.search(driverPlate);
         List<Car> cars = carService.search(driverPlate);
 
-        if(trucks.size() == 0 && motors.size() == 0 && cars.size() == 0){
+        if (trucks.size() == 0 && motors.size() == 0 && cars.size() == 0) {
             System.out.println("No driver plate exists");
-        }
-        else {
+        } else {
             trucks.forEach(System.out::println);
             cars.forEach(System.out::println);
             motors.forEach(System.out::println);
@@ -145,14 +144,13 @@ public class  MainMenu {
         return Integer.parseInt(scanner.nextLine());
     }
 
-    private static void deleteWithConfirm(VehicleService vehicleService, String driverPlate){
+    private static void deleteWithConfirm(VehicleService vehicleService, String driverPlate) {
         System.out.println("Are you sure to delete this item:\n1. Yes\n2. No");
         int choice = getChoice();
-        if(choice == 1){
+        if (choice == 1) {
             vehicleService.delete(driverPlate);
             System.out.println("Deleted successfully!");
-        }
-        else {
+        } else {
             main(null);
         }
     }

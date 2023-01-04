@@ -26,6 +26,7 @@ public class Test {
                     "9.Xuat Ra Danh Sach Sinh Vien Co Diem Tu Cao Den Thap\n" +
                     "10.Sửa thông tin sinh viên theo mã sinh viên\n"+
                     "11.lưu danh sách sinh viên xuống tập tin\n"+
+                    "12.đọc danh sách sinh vien từ tập tin\n"+
                     "0.Thoat Chuong Trinh\n");
             choise = sc.nextInt();
             sc.nextLine();
@@ -95,7 +96,11 @@ public class Test {
                 String tenFile = sc.nextLine();
                 File f = new File(tenFile);
                 dssv.ghiDuLieuXuongFile(f);
-
+            } else if (choise==12) {
+                System.out.println("nhap ten file");
+                String tenFile = sc.nextLine();
+                File f = new File(tenFile);
+                dssv.docDuLieuTuFile(f);
             }
         } while (choise != 0);
     }

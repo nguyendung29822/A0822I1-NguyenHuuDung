@@ -1,6 +1,8 @@
-package ss16_text_file.ghi_file;
+package ss16_text_file.doc_file;
 
-public class Country {
+import java.io.Serializable;
+
+public class Country implements Serializable {
     private int id;
     private String code;
     private String name;

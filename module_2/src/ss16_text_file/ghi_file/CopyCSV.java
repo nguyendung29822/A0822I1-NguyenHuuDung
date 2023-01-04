@@ -1,10 +1,8 @@
 package ss16_text_file.ghi_file;
 
-import ss16_text_file.ghi_file.Country;
-
 import java.io.*;
 
-public class ReadCSV {
+public class CopyCSV {
     public static void main(String[] args) {
         try {
             File file = new File("src/ss16_text_file/doc_file/csv.data");

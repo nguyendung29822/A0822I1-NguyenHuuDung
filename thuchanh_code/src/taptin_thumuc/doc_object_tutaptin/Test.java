@@ -1,4 +1,4 @@
-package taptin_thumuc.copy_object_xuong_taptin;
+package taptin_thumuc.doc_object_tutaptin;
 
 
 import quanly_sinhvien_sudung_arrraylist.DanhSachSinhVien;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        quanly_sinhvien_sudung_arrraylist.DanhSachSinhVien dssv = new DanhSachSinhVien();
+        DanhSachSinhVien dssv = new DanhSachSinhVien();
         int choise = 0;
         do {
             System.out.println("-------MENU-----");
@@ -39,7 +39,7 @@ public class Test {
                 int namSinh = sc.nextInt();
                 System.out.println("nhap diem trung binh :");
                 double dTB = sc.nextDouble();
-                quanly_sinhvien_sudung_arrraylist.SinhVien sv = new quanly_sinhvien_sudung_arrraylist.SinhVien(maID, hoVaTen, namSinh, dTB);
+                SinhVien sv = new SinhVien(maID, hoVaTen, namSinh, dTB);
                 dssv.themSinhVien(sv);
                 // in danh sach sinh vien ra man hinh
             } else if (choise == 2) {
@@ -57,13 +57,13 @@ public class Test {
             } else if (choise == 6) {
                 System.out.println("nhap ma sinh vien :");
                 String maID = sc.nextLine();
-                quanly_sinhvien_sudung_arrraylist.SinhVien sv = new quanly_sinhvien_sudung_arrraylist.SinhVien(maID);
+                SinhVien sv = new SinhVien(maID);
                 dssv.kiemTraSinhVienTonTai(sv);
                 // xóa 1 sinh viên ra khỏi danh sách
             } else if (choise == 7) {
                 System.out.println("nhap ma sinh vien :");
                 String maID = sc.nextLine();
-                quanly_sinhvien_sudung_arrraylist.SinhVien sv = new quanly_sinhvien_sudung_arrraylist.SinhVien(maID);
+                SinhVien sv = new SinhVien(maID);
                 System.out.println("xóa sinh viên ra khỏi ds :" + dssv.xoaSinhVien(sv));
             } else if (choise == 8) {
                 System.out.println("nhap ho va ten :");
@@ -85,7 +85,7 @@ public class Test {
                     int namSinh = sc.nextInt();
                     System.out.println("nhap diem trung binh :");
                     double dTB = sc.nextDouble();
-                    quanly_sinhvien_sudung_arrraylist.SinhVien sv = new SinhVien(maSV, hoVaTen, namSinh, dTB);
+                    SinhVien sv = new SinhVien(maSV, hoVaTen, namSinh, dTB);
                     dssv.suaThongtin(sv);
                     System.out.println("Edit successful !");
                 }

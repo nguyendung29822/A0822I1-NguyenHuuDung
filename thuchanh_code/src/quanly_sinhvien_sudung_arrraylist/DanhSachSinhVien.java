@@ -1,5 +1,7 @@
 package quanly_sinhvien_sudung_arrraylist;
 
+import javax.imageio.IIOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -82,4 +84,38 @@ public class DanhSachSinhVien {
     }
 
 
+    public void ghiDuLieuXuongFile(File file) {
+        try {
+            OutputStream os = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(os);
+            for (SinhVien sinhVien : danhSach) {
+                oos.writeObject(sinhVien);
+            }
+            oos.flush();
+            oos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void docDuLieuTuFile(File file) {
+        try {
+            InputStream is = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(is);
+            SinhVien sv = null;
+            while (true) {
+                Object oj = ois.readObject();
+                if (oj == null) {
+                    break;
+                }
+                if (oj != null) {
+                    sv =(SinhVien) oj;
+                    this.danhSach.add(sv);
+                }
+            }
+            ois.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

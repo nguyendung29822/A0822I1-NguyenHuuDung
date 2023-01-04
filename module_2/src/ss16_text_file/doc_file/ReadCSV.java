@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 
-public class WriteCSV {
+public class ReadCSV {
     public static void main(String[] args) {
         try{
             File file = new File("src/ss16_text_file/doc_file/csv.data");

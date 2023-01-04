@@ -1,4 +1,4 @@
-package taptin_thumuc.copy_object_xuong_taptin;
+package taptin_thumuc.doc_object_tutaptin;
 
 import quanly_sinhvien_sudung_arrraylist.SinhVien;
 

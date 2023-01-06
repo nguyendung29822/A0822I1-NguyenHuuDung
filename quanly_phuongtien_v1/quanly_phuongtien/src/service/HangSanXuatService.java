@@ -13,15 +13,16 @@ public class HangSanXuatService {
         hangSanXuatArrayList.add(new HangSanXuat("KI", "KiA", "Korea"));
         hangSanXuatArrayList.add(new HangSanXuat("AU", "AuDi", "Germany"));
     }
-    public List<HangSanXuat> findAll(){
+    public ArrayList<HangSanXuat> findAll(){
         return hangSanXuatArrayList;
     }
-    public HangSanXuat timKiemTheoTen(String ten){
+    public HangSanXuat timKiemTheoMaHangSanXuat(String ten){
         for (int i = 0; i < hangSanXuatArrayList.size(); i++) {
-            if(hangSanXuatArrayList.get(i).getTenHangSanXuat().equals(ten)){
+            if(hangSanXuatArrayList.get(i).getMaHangSanXuat().equals(ten)){
                 return hangSanXuatArrayList.get(i);
             }
         }
         return null;
     }
+
 }

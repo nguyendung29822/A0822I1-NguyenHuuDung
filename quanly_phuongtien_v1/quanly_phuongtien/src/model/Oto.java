@@ -1,6 +1,8 @@
 package model;
 
-public class Oto extends PhuongTien {
+import java.io.Serializable;
+
+public class Oto extends PhuongTien implements Serializable {
     private double soChoNgoi;
     private String kieuXe;
 
@@ -9,6 +11,10 @@ public class Oto extends PhuongTien {
         super(bienKiemSoat, tenHangSanXuat, namSanXuat, chuSoHuu);
         this.soChoNgoi = soChoNgoi;
         this.kieuXe = kieuXe;
+    }
+
+    public Oto(String bKS) {
+
     }
 
     public double getSoChoNgoi() {

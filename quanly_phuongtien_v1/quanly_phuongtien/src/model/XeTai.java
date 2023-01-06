@@ -1,14 +1,18 @@
 package model;
 
-public class XeTai extends PhuongTien{
+import java.io.Serializable;
+
+public class XeTai extends PhuongTien implements Serializable {
     private double trongTai;
-
-
 
     public XeTai(String bienKiemSoat, HangSanXuat tenHangSanXuat, int namSanXuat, String chuSoHuu, double trongTai) {
         super(bienKiemSoat,tenHangSanXuat, namSanXuat, chuSoHuu);
         this.trongTai = trongTai;
     }
+
+
+
+
 
     public double getTrongTai() {
         return trongTai;

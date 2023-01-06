@@ -1,5 +1,7 @@
 package model;
 
+import service.PhuongTienService;
+
 public class PhuongTien {
     private String bienKiemSoat;
     private HangSanXuat tenHangSanXuat;
@@ -15,6 +17,8 @@ public class PhuongTien {
         this.namSanXuat = namSanXuat;
         this.chuSoHuu = chuSoHuu;
     }
+
+
 
     public String getBienKiemSoat() {
         return bienKiemSoat;
@@ -52,7 +56,7 @@ public class PhuongTien {
     public String toString() {
         return "PhuongTien{" +
                 "bienKiemSoat='" + bienKiemSoat + '\'' +
-                ", tenHangSanXuat='" + tenHangSanXuat + '\'' +
+                ", tenHangSanXuat='" + tenHangSanXuat.getTenHangSanXuat() + '\'' +
                 ", namSanXuat=" + namSanXuat +
                 ", chuSoHuu='" + chuSoHuu + '\'' +
                 '}';

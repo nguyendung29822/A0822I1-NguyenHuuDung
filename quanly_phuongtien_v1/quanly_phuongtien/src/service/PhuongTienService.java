@@ -4,101 +4,165 @@ import model.Oto;
 import model.XeMay;
 import model.XeTai;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class PhuongTienService {
 
-    private ArrayList<XeTai> danhSach1;
-    private ArrayList<XeMay> danhSach2;
-    private ArrayList<Oto> danhSach3;
-
-    public PhuongTienService(ArrayList<XeTai> danhSach1, ArrayList<XeMay> danhSach2, ArrayList<Oto> danhSach3) {
-        this.danhSach1 = danhSach1;
-        this.danhSach2 = danhSach2;
-        this.danhSach3 = danhSach3;
-    }
+    private ArrayList<XeTai> danhSachXeTai = new ArrayList<>();
+    private ArrayList<XeMay> danhSachXeMay = new ArrayList<>();
+    private ArrayList<Oto> danhSachOto = new ArrayList<>();
 
     public PhuongTienService() {
-
     }
 
     public void themPhuongTienXeTai(XeTai xeTai) {
-        this.danhSach1.add(xeTai);
+        this.danhSachXeTai.add(xeTai);
     }
 
     public void themPhuongTienXeOto(Oto oto) {
-        this.danhSach3.add(oto);
+        this.danhSachOto.add(oto);
     }
 
     public void themPhuongTienXeMay(XeMay xeMay) {
-        this.danhSach2.add(xeMay);
+        this.danhSachXeMay.add(xeMay);
     }
 
     public void hienThiDanhSachXeTai() {
-        for (XeTai xetai : danhSach1) {
+        for (XeTai xetai : danhSachXeTai) {
             System.out.println(xetai);
         }
     }
 
     public void hienThiDanhSachOto() {
-        for (Oto oto : danhSach3) {
+        for (Oto oto : danhSachOto) {
             System.out.println(oto);
         }
     }
 
     public void hienThiDanhSachXeMay() {
-        for (XeMay xemay : danhSach2) {
+        for (XeMay xemay : danhSachXeMay) {
             System.out.println(xemay);
         }
     }
 
-//    public boolean kiemTraPhuongTienXeTaiTonTai(XeTai xeTai) {
-//        return this.danhSach1.contains(xeTai);
-//    }
-//    public boolean kiemTraPhuongTienOtoTonTai(Oto oto){
-//        return this.danhSach3.contains(oto);
-//    }
-//    public boolean kiemTraPhuongTienXeMayTonTai(XeMay xeMay){
-//        return this.danhSach2.contains(xeMay);
-//}
+    public void hienThiTatCa() {
+        this.hienThiDanhSachXeTai();
+        this.hienThiDanhSachXeMay();
+        this.hienThiDanhSachOto();
+    }
+    public void xoaPhuongTienXeTai(String bienKiemSoat) {
+        for (int i = 0; i < danhSachXeTai.size(); i++) {
+            if (danhSachXeTai.get(i).getBienKiemSoat().equals(bienKiemSoat)) {
+                danhSachXeTai.remove(i);
+            }
+        }
+    }
 
-    public boolean xoaPhuongTienXeTai(XeTai xeTai){
-        return this.danhSach1.remove(xeTai);
+
+    public void xoaPhuongTienOto(String bienKiemSoat) {
+        for (int i = 0; i < danhSachOto.size(); i++) {
+            if (danhSachOto.get(i).getBienKiemSoat().equals(bienKiemSoat)) {
+                danhSachOto.remove(i);
+            }
+        }
     }
-    public boolean xoaPhuongTienOto(Oto oto){
-        return this.danhSach3.remove(oto);
+
+    public void xoaPhuongTienXeMay(String bienKiemSoat) {
+        for (int i = 0; i < danhSachXeMay.size(); i++) {
+            if (danhSachXeMay.get(i).getBienKiemSoat().equals(bienKiemSoat)) {
+                danhSachXeMay.remove(i);
+            }
+        }
     }
-    public boolean xoaPhuongTienXeMay(XeMay xeMay){
-        return this.danhSach2.remove(xeMay);
+
+    public boolean kiemTraBienKiemSoatXeTai(String bienKiemSoat) {
+        for (int i = 0; i < danhSachXeTai.size(); i++) {
+            if (danhSachXeTai.get(i).getBienKiemSoat().equals(bienKiemSoat)) {
+                return true;
+            }
+        }
+        return false;
     }
-    public boolean kiemTraBienKiemSoatXeTai(String bienKiemSoat){
-        return this.danhSach1.contains(bienKiemSoat);
+
+    public boolean kiemTraBienKiemSoatOto(String bienKiemSoat) {
+        for (int i = 0; i < danhSachOto.size(); i++) {
+            if (danhSachOto.get(i).getBienKiemSoat().equals(bienKiemSoat)) {
+                return true;
+            }
+        }
+        return false;
     }
-    public boolean kiemTraBienKiemSoatOto(String bienKiemSoat1){
-        return this.danhSach3.contains(bienKiemSoat1);
+
+    public boolean kiemTraBienKiemSoatXeMay(String bienKiemSoat) {
+        for (int i = 0; i < danhSachXeMay.size(); i++) {
+            if (danhSachXeMay.get(i).getBienKiemSoat().equals(bienKiemSoat)) {
+                return true;
+            }
+        }
+        return false;
     }
-    public boolean kiemTraBienKiemSoatXeMay(String bienKiemSoat2){
-        return this.danhSach2.contains(bienKiemSoat2);
-    }
-    public void timKiemXeTai(String bienKiemSoat){
-        for (XeTai xetai:danhSach1) {
-            if(xetai.getBienKiemSoat().indexOf(bienKiemSoat)>=0){
+
+    public void timKiemXeTai(String bienKiemSoat) {
+        for (XeTai xetai : danhSachXeTai) {
+            if (xetai.getBienKiemSoat().indexOf(bienKiemSoat) >= 0) {
                 System.out.println(xetai);
             }
         }
     }
-    public void timKiemOto(String bienKiemSoat1){
-        for (Oto oto:danhSach3) {
-            if(oto.getBienKiemSoat().indexOf(bienKiemSoat1)>=0){
+
+    public void timKiemOto(String bienKiemSoat) {
+        for (Oto oto : danhSachOto) {
+            if (oto.getBienKiemSoat().indexOf(bienKiemSoat) >= 0) {
                 System.out.println(oto);
             }
         }
     }
-    public void timKiemXeMay(String bienKiemSoat2){
-        for (XeMay xemay:danhSach2) {
-            if(xemay.getBienKiemSoat().indexOf(bienKiemSoat2)>=0){
+
+    public void timKiemXeMay(String bienKiemSoat) {
+        for (XeMay xemay : danhSachXeMay) {
+            if (xemay.getBienKiemSoat().indexOf(bienKiemSoat) >= 0) {
                 System.out.println(xemay);
             }
+        }
+    }
+
+    public void ghiDuLieuXeTai(File file) {
+        try {
+            FileOutputStream os = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(os);
+            oos.writeObject(danhSachXeTai);
+//            for (XeTai xeTai : danhSachXeTai) {
+//                oos.writeObject(xeTai);
+//            }
+            oos.flush();
+            oos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void docDuLieuXeTai(File file) {
+        try {
+            FileInputStream is = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(is);
+            danhSachXeTai = (ArrayList<XeTai>) ois.readObject();
+            System.out.println(danhSachXeTai);
+
+//            while (true) {
+//                Object oj = ois.readObject();
+//                if (oj == null) {
+//                    break;
+//                }
+//                if (oj != null) {
+//                    xeTai = (XeTai) oj;
+//                    this.danhSachXeTai.add(xeTai);
+//                }
+//            }
+            ois.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

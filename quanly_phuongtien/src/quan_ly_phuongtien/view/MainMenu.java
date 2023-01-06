@@ -144,7 +144,7 @@ public class MainMenu {
         System.out.println("lua chon cua ban :");
         return Integer.parseInt(scanner.nextLine());
     }
-    private static void xacNhanXoa(PhuongTienService phuongTienService,String bienKiemSoat){
+    private static void  xacNhanXoa(PhuongTienService phuongTienService,String bienKiemSoat){
         System.out.println("ban chac chan xoa muc nay khong:\n"+"1.Yes\n"+"2.No");
         int choise = getChoise();
         if(choise==1){

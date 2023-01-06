@@ -2,7 +2,7 @@ package quanly_sinhvien_sudung_arrraylist;
 
 import java.util.Objects;
 
-public class SinhVien implements Comparable<SinhVien> {
+public class SinhVien implements Comparable<SinhVien>{
     private String maID;
     private String hoVaTen;
     private int namSinh;
